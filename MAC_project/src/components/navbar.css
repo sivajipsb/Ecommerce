@@ -1,0 +1,23 @@
+#navbar{
+    height: 50px;
+    width:100%;
+    /* border:1px solid red; */
+    display:flex;
+    justify-content:flex-end;
+    justify-content: space-evenly;
+    background-color: rgb(181, 182, 226);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#navbarone{
+    height: 50%;
+    width:50%;
+    /* border:1px solid rgb(0, 255, 242); */
+    display:flex;
+    justify-content:flex-end;
+    justify-content: space-evenly;
+    background-color: rgb(193, 226, 181);
+    padding: 10px;
+    text-decoration: none;
+}
+

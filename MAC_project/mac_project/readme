@@ -1,0 +1,26 @@
+# E-commerce Website for electronics
+
+
+## Features :- 
+
+. Product page
+. Added sorting and filter functionality.
+. User can add the product to the cart.
+. Users can delete the items from  the of the cart
+. Added checkout page for payment.
+.Fecthed data from api 
+. Deployed frontend on verceland backend on heroku.
+
+## Tech Stack used :- 
+
+. React Js
+. Redux
+. React router
+. Axios
+. CSS
+.React-Redux
+
+## frontend deployed link :-https://ec-sivajipsb.vercel.app/
+## heroku deployed link :-https://macsivaji.herokuapp.com/products
+
+## Thanks for your visit.

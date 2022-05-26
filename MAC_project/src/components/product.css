@@ -1,0 +1,37 @@
+#one>button
+{
+    width:100px;
+    margin-block: 100px;
+    border-color: rgb(251, 252, 251);
+    font-size: larger;
+   
+}
+#one>button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+#one>button:hover{
+    background-color: rgb(39, 69, 179);
+    color:rgb(0, 0, 0)
+}
+ #grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    width:90%;
+    padding:20px;
+    margin-left:70px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset; */
+} 
+#grid>div{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+#grid>div:hover{
+   background-color: rgb(237, 227, 227);
+}
+#button:hover{
+    background-color: rgb(73, 67, 159);
+    border-radius: 50px;
+}
