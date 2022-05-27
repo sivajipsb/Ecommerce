@@ -8,7 +8,7 @@ import {  faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 
 export const Navbar = ()=>{
-    const count=useSelector((store)=>store.count)
+    const count=useSelector((store)=>store.cart.count)
  
     return (
         <div>

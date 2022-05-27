@@ -3,27 +3,37 @@ import { useParams } from "react-router-dom";
 import axios from "axios"
 import {Link} from "react-router-dom"
 import "./productid.css"
-import { addcart } from "../redux/action";
+import { addcart } from "../redux/cart/action";
 import { useDispatch,useSelector } from "react-redux";
 import { Navbar } from "./navbar";
+import { selectproduct,deleteproduct} from "../redux/items/action";
 
 
 export const Product_id =()=>{
 
     const dispatch=useDispatch()
     const count=useSelector((store)=>store.count)
-         
+   
+       
     const {id} =useParams();
-    const[me,setMe] =useState([])
+    // const[me,setMe] =useState([])
     useEffect(()=>{
         axios.get(`https://macsivaji.herokuapp.com/products/${id}`).then(({data})=>{
             
-            setMe(data)
-            console.log(data)
+            // setMe(data)
+            // console.log(data)
+            dispatch(selectproduct(data))
+            return()=>{
+                dispatch(deleteproduct())
+            }
             
         })
     },[])
+    const me=useSelector((store)=>store.single.single)
+      console.log(me,"me")
     return (
+        <>
+        {Object.keys(me).length===0 ?(<div><h1>...loading</h1></div>):(
         <div>
             <Navbar/> 
             <div id="flex">
@@ -40,6 +50,7 @@ export const Product_id =()=>{
 
                 </div>
             </div>
-        </div>
+        </div>)}
+        </>
     )
 }

@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { Navbar } from "./navbar";
 import "./goto.css"
-import { deletecart } from "../redux/action";
+import { deletecart } from "../redux/cart/action";
 export const Goto_cart =()=>{
-const cart=useSelector((store)=>store.count)
+const cart=useSelector((store)=>store.cart.count)
 const dispatch=useDispatch()
 console.log(cart,"cart",typeof(cart))
 

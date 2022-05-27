@@ -1,7 +1,7 @@
 // import { Product } from "../components/product";
 import { ADDCART,DELETECART } from "./action";
 
-export const reducer =(state,action)=>{
+export const reducer =(state={count:[]},action)=>{
     console.log(state)
     
     switch(action.type)
