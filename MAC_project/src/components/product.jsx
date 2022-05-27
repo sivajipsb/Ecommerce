@@ -8,10 +8,10 @@ import { setproduct } from "../redux/items/action";
 import { api } from "../redux/items/action";
 export const Product =()=>{
 
-    // const products=useSelector((store)=>store.items.products)
+    const products=useSelector((store)=>store.items.products)
     const dispatch=useDispatch()
     // const[data,setdata]=useState([])
-    // const[state,setstate]=useState(products)
+    const[state,setstate]=useState(products)
     
     const {id} =useParams();
     useEffect(()=>{
@@ -20,13 +20,13 @@ export const Product =()=>{
             
        
     },[])
-    const products=useSelector((store)=>store.items.products)
+    // const products=useSelector((store)=>store.items.products)
 console.log(products,"products")
 
     const Filter =(item)=>{
         const updatedlist=products.filter((x)=>x.category===item);
         setstate(updatedlist)
-
+console.log(updatedlist,"update")
     }
     function handlesort(term){
         if(term==="lh"){
@@ -68,7 +68,7 @@ console.log(products,"products")
             <div id="grid">
                 
             
-            {products.map((e)=>{
+            {state.map((e)=>{
                 return (
                     <>
                     <div>
