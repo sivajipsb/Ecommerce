@@ -8,7 +8,7 @@ import hdfc from "./images/hdfc.png"
 import { useSelector } from "react-redux"
 
 export const Payment =() =>{
-    const cart=useSelector((store)=>store.count)
+    const cart=useSelector((store)=>store.cart.count)
     const navigate=useNavigate()
     return (
         <div>

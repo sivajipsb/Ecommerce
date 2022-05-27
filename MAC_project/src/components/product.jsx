@@ -5,45 +5,43 @@ import { Navbar } from "./navbar";
 import "./product.css"
 import { useSelector,useDispatch } from "react-redux";
 import { setproduct } from "../redux/items/action";
+import { api } from "../redux/items/action";
 export const Product =()=>{
 
-    const products=useSelector((store)=>store.items.products)
+    // const products=useSelector((store)=>store.items.products)
     const dispatch=useDispatch()
     // const[data,setdata]=useState([])
-    // const[state,setstate]=useState(data)
+    // const[state,setstate]=useState(products)
     
     const {id} =useParams();
     useEffect(()=>{
-        axios.get("https://macsivaji.herokuapp.com/products").then(({data})=>{
-            // setdata(data)
-            // setstate(data)
-            // console.log(data)
-            dispatch(setproduct(data))
+       
+            dispatch(api())
             
-        })
+       
     },[])
-
+    const products=useSelector((store)=>store.items.products)
 console.log(products,"products")
 
-    // const Filter =(item)=>{
-    //     const updatedlist=data.filter((x)=>x.category===item);
-    //     setstate(updatedlist)
+    const Filter =(item)=>{
+        const updatedlist=products.filter((x)=>x.category===item);
+        setstate(updatedlist)
 
-    // }
-    // function handlesort(term){
-    //     if(term==="lh"){
-    //       let x=products.sort((a,b)=> a.price-b.price)
-    //     //   console.log(x)
-    //     //    setdata([...x])
-    //        setstate([...x])
-    //     }
-    //     if(term==="hl"){
-    //         let x=products.sort((a,b)=> b.price-a.price)
-    //         console.log(x)
-    //         //  setdata([...x])
-    //         setstate([...x])
-    //       }
-    // }
+    }
+    function handlesort(term){
+        if(term==="lh"){
+          let x=products.sort((a,b)=> a.price-b.price)
+        //   console.log(x)
+        //    setdata([...x])
+           setstate([...x])
+        }
+        if(term==="hl"){
+            let x=products.sort((a,b)=> b.price-a.price)
+            console.log(x)
+            //  setdata([...x])
+            setstate([...x])
+          }
+    }
    
     
     return (
@@ -56,7 +54,7 @@ console.log(products,"products")
                   <div id="one" >
                  
             
-            <button  onClick={()=>setstate(data)}>All</button>
+            <button  onClick={()=>setstate(products)}>All</button>
             <button onClick={()=>Filter("mobiles")}>Mobiles</button>
             <button onClick={()=>Filter("tv")}>Tvs</button>
             <button onClick={()=>Filter("laptops")}>Laptops</button>

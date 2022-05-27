@@ -7,7 +7,7 @@ import { addcart } from "../redux/cart/action";
 import { useDispatch,useSelector } from "react-redux";
 import { Navbar } from "./navbar";
 import { selectproduct,deleteproduct} from "../redux/items/action";
-
+import { api_id } from "../redux/items/action";
 
 export const Product_id =()=>{
 
@@ -18,16 +18,12 @@ export const Product_id =()=>{
     const {id} =useParams();
     // const[me,setMe] =useState([])
     useEffect(()=>{
-        axios.get(`https://macsivaji.herokuapp.com/products/${id}`).then(({data})=>{
+      dispatch(api_id(id))
+            // return()=>{
+            //     dispatch(deleteproduct(id))
+            // }
             
-            // setMe(data)
-            // console.log(data)
-            dispatch(selectproduct(data))
-            return()=>{
-                dispatch(deleteproduct())
-            }
-            
-        })
+        
     },[])
     const me=useSelector((store)=>store.single.single)
       console.log(me,"me")
