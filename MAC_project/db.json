@@ -95,6 +95,44 @@
       "image":"https://m.media-amazon.com/images/I/71nTZkJByLL._SL1500_.jpg"
      }
      
+  ],
+
+  "mobiles":[
+    
+      {
+        "id":1,
+        "title":"nokia",
+        "price":1000,
+        "description":"small mobile",
+        "category":"mobiles",
+        "image":"https://static.connect2india.com/c2icd/product_resources/images/nokia-mobiles.jpg"
+       },
+       {
+        "id":2,
+        "title":"samsung",
+        "price":2000,
+        "description":"medium mobile",
+        "category":"mobiles",
+        "image":"https://www.reliancedigital.in/medias/Samsung-A03-Core-Smartphones-492574205-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzQ3MDZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGM2L2g1ZS85NzM3MDUyNjg0MzE4LmpwZ3w5ZWZiN2FkZmZlN2ZkN2JkZDVmYzkyYWYwNTlhMzBmYjIyMzFjMzM1ODA1ZDhmZDQ1MDY1MGM0ZGRlZWJmODZk"
+       },
+       {
+        "id":3,
+        "title":"redmi",
+        "price":3000,
+        "description":"medium mobile",
+        "category":"mobiles",
+        "image":"https://m.media-amazon.com/images/I/817clKAKcqL._SL1500_.jpg"
+       }, 
+       {
+        "id":4,
+        "title":"oneplus",
+        "price":4000,
+        "description":"medium mobile",
+        "category":"mobiles",
+        "image":"https://www.reliancedigital.in/medias/OnePlus-Nord-CE-2-Lite-5G-Mobile-Phone-492850035-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzM0OTR8aW1hZ2UvcG5nfGltYWdlcy9oNGQvaGI2Lzk4MjA5OTUzODc0MjIucG5nfDljZGM5M2YzZTcxYzM5ZDg2ZWUyYWE3ZjlmMWUxMDNlYjM0ZjI4MzY0NmQxZTdhMjU5MzNhMTAyYjRlNjBhMzU"
+       }
+      
+       
   ]
   
   

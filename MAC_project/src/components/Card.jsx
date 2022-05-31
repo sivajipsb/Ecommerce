@@ -17,18 +17,19 @@ export const Card = ()=>{
 
             <br></br>
             {/* <br></br> */}
-            <input type="text" id={styles.sinp} placeholder="Enter card number" />
+            <input type="number"  min="10" max="16" id={styles.sinp} placeholder="Enter card number" />
+            {/* alert("Payment is confirmed") */}
             <br></br>
             <div id={styles.splace}>
                 
             <div><span><b>EXPIRY</b></span>
             <br></br>
-            <input type="text" id={styles.sinputs} placeholder="MM/YYYY" />
+            <input type="date" id={styles.sinputs} placeholder="MM/YYYY" />
             </div>
             <div>
             <span><b>CVV</b></span>
             <br></br>
-            <input type="text" id={styles.sinputs} placeholder="CVV" />
+            <input type="number" min="3" max="3" id={styles.sinputs} placeholder="CVV" />
 
             </div>
 
@@ -36,6 +37,8 @@ export const Card = ()=>{
            
             </div>
             <button id={styles.spaypal} onClick= { ()=>{
+
+
                 alert("Payment is confirmed")
                 navigate("/thank")
             }}>Pay</button>
