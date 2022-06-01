@@ -24,7 +24,7 @@ export const Card = ()=>{
                 
             <div><span><b>EXPIRY</b></span>
             <br></br>
-            <input type="date" id={styles.sinputs} placeholder="MM/YYYY" />
+            <input type="date" id={styles.sinputs} placeholder="MM/YYYY"  onChange={(e)=>e.target.value}/>
             </div>
             <div>
             <span><b>CVV</b></span>
