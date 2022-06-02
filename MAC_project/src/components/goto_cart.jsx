@@ -18,7 +18,7 @@ const totallist=(list)=>{
         
           <h3><b>{list.title}</b>:<span> {a} Rs  <b>({list.quantity})</b></span></h3>
         
-        {/* <span>₹ {a} <b>({item.quantity})</b></span> */}
+      
         <br></br>
         </>
     
@@ -43,13 +43,13 @@ const totallist=(list)=>{
                     
                     <img src={e.image} height= "200px"/>
                     <p><b>{e.title}</b></p>
-                    {/* <p><i>{e.description}</i></p> */}
+                  
                     <p><b> Price  : {e.price} RS</b></p>
                    
                      <button onClick={() => dispatch(update(e,cart,1))}   >+</button>
                         <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
                         <button onClick={() => dispatch(update(e,cart,-1))} >-</button>
-                   {/* totalprice={e.price} */}
+                  
                   <br></br>
                    <button id="delete" onClick={()=>{
                       dispatch(deletecart(index))
@@ -60,7 +60,7 @@ const totallist=(list)=>{
                    
                 </div>
                 
-                // console.log(cart,"cart",typeof(cart))
+             
               
 
                 )
@@ -71,14 +71,7 @@ const totallist=(list)=>{
             
             
              <div id="ship">
-                 {/* <h1>Order Summary</h1>
-                <h2>Total No Of Items:{cart.quantity}</h2>
-              <h3>Total value:  {cart.reduce((accumulator,object)=>{
-                    return accumulator+object.price
-                       
-                  
-                },0)} Rs</h3>  
-                 <strong>Rs {total}</strong> */}
+              
                  {cart.map(totallist)}
              
                 <h3>Total (INR) :<strong>Rs {total}</strong></h3>
