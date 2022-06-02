@@ -26,10 +26,11 @@ export const updateadd = (data) => {
         payload:data
     }
 }
-export const update = (e,state,value) => (dispatch) => {
-    let x = state.map((ex) => {
-        if(ex.id === e.id){
-            if(ex.quantity === 1 && value === -1){
+export const update = (e,cart,value) => (dispatch) => {
+    console.log(cart,"sivajicart")
+    let x = cart.map((ex) => {
+        if(ex.id == e.id){
+            if(ex.quantity == 1 && value == -1){
                 ex.quantity = ex.quantity;
             }
             else{

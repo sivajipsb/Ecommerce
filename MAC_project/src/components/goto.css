@@ -4,14 +4,14 @@
     /* grid-template-columns: repeat(3,1fr); */
     /* border:1px solid black */
 }
-#ones
+ #ones 
 {
     height:50%;
     width:70%;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     /* border:1px solid black */
-}
+} 
 #ship
 {
   

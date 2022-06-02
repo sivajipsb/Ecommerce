@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Navbar = ()=>{
-    const count=useSelector((store)=>store.cart.count)
+    const count=useSelector((store)=>store.cart)
 // const[set,setset]=useState([])
 
 

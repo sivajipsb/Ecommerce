@@ -7,6 +7,7 @@ import { Goto_cart } from "./components/goto_cart"
 import { Payment } from "./components/payment"
 import {Card} from "./components/Card"
 import { Thank } from "./components/Thank"
+import {Checkout} from "./components/checkout"
 function App() {
  
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/payment" element={<Payment/>}></Route>
         <Route path="/card" element={<Card/>}></Route>
         <Route path="/thank" element={<Thank/>}></Route>
+        <Route path="/checkout" element={<Checkout/>}></Route>
         
       </Routes>
      

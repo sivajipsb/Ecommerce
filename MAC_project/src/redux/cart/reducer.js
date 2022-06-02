@@ -1,7 +1,8 @@
 // import { Product } from "../components/product";
 import { ADDCART,DELETECART,DELITEM } from "./action";
 
-export const reducer =(state={count:[]},action)=>{
+const count=[];
+export const reducer =(state=count,action)=>{
     console.log(state)
     
     switch(action.type)
@@ -9,19 +10,26 @@ export const reducer =(state={count:[]},action)=>{
         case ADDCART:
                  
                 
-                return {...state,count:[...state.count,action.payload]}
+            return [
+                ...state,
+                action.payload
+            ]
       
                 case DELETECART:
                    
                    
-                 return {...state,count:[...state.count.filter((counts,index)=>index!==action.payload)]}
+                 return [...state.filter((counts,index)=>index!==action.payload)]
                 
-                case DELITEM:
-            return {...state,count:[...state.count.filter((x)=>{
-                return x.id !== action.payload.id
-            })]}
+            //     case DELITEM:
+            // return {...state,count:[...state.count.filter((x)=>{
+            //     return x.id !== action.payload.id
+            // })]}
+            case 'DELITEM':
+                return state=state.filter((x)=>{
+                    return x.id !== action.payload.id
+                })
             case "UPDATEADD":
-                return {...state};
+                return [...state]
                      
             
             
