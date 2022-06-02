@@ -8,7 +8,7 @@ import hdfc from "./images/hdfc.png"
 import { useSelector } from "react-redux"
 
 export const Payment =() =>{
-    const cart=useSelector((store)=>store.cart.count)
+    const cart=useSelector((store)=>store.cart)
     const navigate=useNavigate()
     return (
         <div>
@@ -24,13 +24,13 @@ export const Payment =() =>{
                     </div>
                 <div id={styles.schoose}><p>Choose a payment option</p></div>
  
-                <b>Total Items:{cart.length}</b>
+                {/* <b>Total Items:{cart.length}</b>
                 <h3>Total Amount:  {cart.reduce((accumulator,object)=>{
-                    return accumulator+object.price
+                    return accumulator+object.price */}
 
                        
                     
-                },0)} Rs</h3>
+                {/* },0)} Rs</h3> */}
                
             </div>
             <div id={styles.stwo}>
