@@ -8,12 +8,30 @@ export const Goto_cart =()=>{
 const cart=useSelector((store)=>store.cart)
 const dispatch=useDispatch()
 console.log(cart,"cart",typeof(cart))
-
-
+var total = 0;
+const totallist=(list)=>{
+  let a = list.price
+    total=total+(+a)*list.quantity;    
+    return(
+       <>
+     
+        
+          <h3><b>{list.title}</b>:<span> {a} Rs  <b>({list.quantity})</b></span></h3>
+        
+        {/* <span>₹ {a} <b>({item.quantity})</b></span> */}
+        <br></br>
+        </>
+    
+    )
+} 
 
     return (
       <>
       <Navbar/>
+
+
+      
+           
         <div id="flexy">
          
           <div id="ones">
@@ -28,41 +46,57 @@ console.log(cart,"cart",typeof(cart))
                     {/* <p><i>{e.description}</i></p> */}
                     <p><b> Price  : {e.price} RS</b></p>
                    
-                     <button onClick={() => dispatch(update(e,cart,1))}  className="plus btn-outline-primary" >+</button>
+                     <button onClick={() => dispatch(update(e,cart,1))}   >+</button>
                         <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
-                        <button onClick={() => dispatch(update(e,cart,-1))} className="plus btn-outline-primary">-</button>
+                        <button onClick={() => dispatch(update(e,cart,-1))} >-</button>
                    {/* totalprice={e.price} */}
                   <br></br>
                    <button id="delete" onClick={()=>{
                       dispatch(deletecart(index))
                     }}> delete</button>
-                   <div  style={{fontSize:"25px",width:"180px"}}>Total : {(+e.quantity)*(+(e.price))}</div>
+                   <div ><h3>Total : {(+e.quantity)*(+(e.price))}</h3></div>
+                   
+
+                   
                 </div>
                 
                 // console.log(cart,"cart",typeof(cart))
-                
+              
 
                 )
             })}
             </div>
 
-{/* console.log(e,"eee") */}
+
             
             
-            {/* {/* <div id="ship"> */}
-                {/* <h1>Order Summary</h1>
-                <h2>Total No Of Items:{cart.length}</h2>
+             <div id="ship">
+                 {/* <h1>Order Summary</h1>
+                <h2>Total No Of Items:{cart.quantity}</h2>
               <h3>Total value:  {cart.reduce((accumulator,object)=>{
                     return accumulator+object.price
                        
-                    
-                },0)} Rs</h3> */} 
-                 
-                <Link to ="/checkout" style={{textDecoration:"none"}}> <button id="act">Click Here To Paymentpage</button></Link>
+                  
+                },0)} Rs</h3>  
+                 <strong>Rs {total}</strong> */}
+                 {cart.map(totallist)}
+             
+                <h3>Total (INR) :<strong>Rs {total}</strong></h3>
+                
+                <br></br>
+                <br></br>
+              
+                <Link to ="/checkout" style={{textDecoration:"none"}}> <button id="act">Click Here To CheckoutPage</button></Link>
                
             </div>
+           
                
-        {/* </div> */}
+         </div> 
+         <div id="meem">
+
+        
+         {/* <Link to ="/checkout" style={{textDecoration:"none",marginLeft:"700px"}}> <button id="act">Click Here To CheckoutPage</button></Link> */}
+         </div>
         </>
     )
 }

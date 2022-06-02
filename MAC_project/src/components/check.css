@@ -2,5 +2,24 @@
     border:1px solid red;
     height:500px;
     width:1000px;
-    margin:auto
+    /* margin:auto; */
+    display:flex;
+    margin-left:200px;
+}
+#oness{
+    height:90%;
+    width:65%;
+    border:1px solid teal;
+}
+#twoss{
+    height:90%;
+    width:30%;
+    border:1px solid rgb(28, 225, 10);
+}
+#oness>input{
+    height:8%;
+    width:65%;
+    border:1px solid teal;
+    margin-bottom: 2%;
+    margin-top: 1%;
 }
