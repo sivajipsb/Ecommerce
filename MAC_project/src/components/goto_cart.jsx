@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { Navbar } from "./navbar";
 import "./goto.css"
 import { deletecart } from "../redux/cart/action";
+import { update } from "../redux/cart/action";
 export const Goto_cart =()=>{
 const cart=useSelector((store)=>store.cart.count)
 const dispatch=useDispatch()
@@ -29,6 +30,9 @@ console.log(cart,"cart",typeof(cart))
                     <button id="delete" onClick={()=>{
                       dispatch(deletecart(index))
                     }}> delete</button>
+                     <button onClick={() => dispatch(update(e,cart,1))}  className="plus btn-outline-primary" >+</button>
+                        <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
+                        <button onClick={() => dispatch(update(e,cart,-1))} className="plus btn-outline-primary">-</button>
                    {/* totalprice={e.price} */}
                 </div>
                 

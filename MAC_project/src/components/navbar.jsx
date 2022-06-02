@@ -5,16 +5,26 @@ import { Product } from "./product";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {  faCartShopping } from '@fortawesome/free-solid-svg-icons'
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Navbar = ()=>{
     const count=useSelector((store)=>store.cart.count)
+// const[set,setset]=useState([])
+
+
+//     useEffect(()=>{
+//         axios.get( "http://localhost:5050/mobiles").then(({data})=>{
+//  console.log(data.length,"data")
+//         setset(data)
+//         })
+//     },[])
  
     return (
         <div>
          
            
-
+               
            
             {/* <h1>navbar</h1> */}
             <div id="navbar">
@@ -25,8 +35,9 @@ export const Navbar = ()=>{
                 <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>About</b></Link></div>
                 <div><Link to ="/gotocart" style={{textDecoration:"none"}}><b>CartPage</b></Link></div>
                 </div>
+                 {/* <h1>gowtham sai shopping mall </h1> */}
                 <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({count.length})  </button></div>
-                      
+                {/* <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({set.length})  </button></div>    */}
                
             </div>
 

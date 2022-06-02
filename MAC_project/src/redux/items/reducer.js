@@ -23,11 +23,11 @@ export const itemreducer = (state = initstate, action) => {
 
 
 
-export const selectreducer = (state = { single: {} }, action) => {
+export const selectreducer = (state = { single: "" }, action) => {
     console.log(state)
     switch (action.type) {
         case SELECTPRODUCT:
-            return { ...state, single: { ...action.payload } }
+            return { ...state, single:  action.payload  }
         // case DELETEPRODUCT:
         // return {  }
         default:
