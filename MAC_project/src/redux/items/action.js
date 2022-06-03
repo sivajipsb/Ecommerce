@@ -76,7 +76,7 @@ export const api = () => (dispatch) => {
 
     dispatch(loading())
 
-    axios.get("http://localhost:5050/products").then(({ data }) => {
+    axios.get("https://macsivaji.herokuapp.com/products").then(({ data }) => {
         dispatch(setproduct(data))
 
 
@@ -87,7 +87,7 @@ export const api = () => (dispatch) => {
 }
 
 export const api_id = (id) => (dispatch) => {
-    axios.get(`http://localhost:5050/products/${id}`).then(({ data }) => {
+    axios.get(`https://macsivaji.herokuapp.com/products/${id}`).then(({ data }) => {
         dispatch(selectproduct(data))
 
 

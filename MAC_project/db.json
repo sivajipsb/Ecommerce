@@ -2,18 +2,18 @@
   "products": [
     {
       "id": 1,
-      "title": "nokia",
+      "title": "Nokia",
       "price": 1000,
-      "description": "small mobile",
-      "category": "mobiles",
+      "description": "Small mobile",
+      "category": "Mobiles",
       "image": "https://static.connect2india.com/c2icd/product_resources/images/nokia-mobiles.jpg",
       "quantity":1
     },
     {
       "id": 2,
-      "title": "samsung",
+      "title": "Samsung",
       "price": 2000,
-      "description": "medium mobile",
+      "description": "Medium mobile",
       "category": "mobiles",
       "image": "https://www.reliancedigital.in/medias/Samsung-A03-Core-Smartphones-492574205-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzQ3MDZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGM2L2g1ZS85NzM3MDUyNjg0MzE4LmpwZ3w5ZWZiN2FkZmZlN2ZkN2JkZDVmYzkyYWYwNTlhMzBmYjIyMzFjMzM1ODA1ZDhmZDQ1MDY1MGM0ZGRlZWJmODZk"
    ,
@@ -21,10 +21,10 @@
     },
     {
       "id": 3,
-      "title": "redmi",
+      "title": "Redmi",
       "price": 3000,
-      "description": "medium mobile",
-      "category": "mobiles",
+      "description": "Medium mobile",
+      "category": "Mobiles",
       "image": "https://m.media-amazon.com/images/I/817clKAKcqL._SL1500_.jpg",
       "quantity":1
     },
@@ -41,7 +41,7 @@
       "id": 5,
       "title": "lg",
       "price": 5000,
-      "description": "small tv",
+      "description": "Small tv",
       "category": "tv",
       "image": "https://www.lg.com/in/images/tvs/md07511862/gallery/32LM563BPTC-D-01.jpg",
       "quantity":1
@@ -50,110 +50,67 @@
       "id": 6,
       "title": "sony",
       "price": 6000,
-      "description": "small tv",
+      "description": "Small tv",
       "category": "tv",
       "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637912157/Croma%20Assets/Entertainment/Television/Images/235448_vbcqq5.png/mxw_1440,f_auto"
       ,"quantity":1
     },
     {
       "id": 7,
-      "title": "kodak",
+      "title": "Kodak",
       "price": 7000,
-      "description": "large tv",
-      "category": "tv",
+      "description": "Large tv",
+      "category": "Tv",
       "quantity":1,
       "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000008404826_437Wx649H_202205031151291.jpeg"
     },
     {
       "id": 8,
-      "title": "tcl",
+      "title": "Tcl",
       "price": 8000,
-      "description": "large tv",
-      "category": "tv",
+      "description": "Large tv",
+      "category": "Tv",
       "quantity":1,
       "image": "https://m.media-amazon.com/images/I/61OLHyD8NVL._SX679_.jpg"
     },
     {
       "id": 9,
-      "title": "dell",
+      "title": "Dell",
       "price": 10000,
-      "description": "small laptop",
-      "category": "laptops",
+      "description": "Small laptop",
+      "category": "Laptops",
       "quantity":1,
       "image": "https://3.imimg.com/data3/IO/YN/MY-8073310/dell-laptops-500x500.jpg"
     },
     {
       "id": 10,
-      "title": "lenovo",
+      "title": "Lenovo",
       "price": 20000,
-      "description": "windows",
-      "category": "laptops",
+      "description": "Windows",
+      "category": "Laptops",
       "quantity":1,
       "image": "https://m.media-amazon.com/images/I/71bnWlbwQ-L._SX450_.jpg"
     },
     {
       "id": 11,
-      "title": "apple",
+      "title": "Apple",
       "price": 30000,
-      "description": "ios system",
-      "category": "laptops",
+      "description": "Ios system",
+      "category": "Laptops",
       "quantity":1,
       "image": "https://m.media-amazon.com/images/I/71jG+e7roXL._SL1500_.jpg"
     },
     {
       "id": 12,
-      "title": "hp",
+      "title": "Hp",
       "price": 40000,
-      "description": "large laptop",
-      "category": "laptops",
+      "description": "Large laptop",
+      "category": "Laptops",
       "quantity":1,
       "image": "https://m.media-amazon.com/images/I/71nTZkJByLL._SL1500_.jpg"
     }
   ],
-  "mobiles": [
-    {
-      "id": 6,
-      "title": "sony",
-      "price": 6000,
-      "description": "small tv",
-      "category": "tv",
-      "quantity":1,
-      "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637912157/Croma%20Assets/Entertainment/Television/Images/235448_vbcqq5.png/mxw_1440,f_auto"
-    },
-    {
-      "id": 2,
-      "title": "samsung",
-      "price": 2000,
-      "description": "medium mobile",
-      "category": "mobiles",
-      "quantity":1,
-      "image": "https://www.reliancedigital.in/medias/Samsung-A03-Core-Smartphones-492574205-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzQ3MDZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGM2L2g1ZS85NzM3MDUyNjg0MzE4LmpwZ3w5ZWZiN2FkZmZlN2ZkN2JkZDVmYzkyYWYwNTlhMzBmYjIyMzFjMzM1ODA1ZDhmZDQ1MDY1MGM0ZGRlZWJmODZk"
-    },
-    {
-      "id": 8,
-      "title": "tcl",
-      "price": 8000,
-      "description": "large tv",
-      "category": "tv",
-      "quantity":1,
-      "image": "https://m.media-amazon.com/images/I/61OLHyD8NVL._SX679_.jpg"
-    },
-    {
-      "id": 9,
-      "title": "dell",
-      "price": 10000,
-      "description": "small laptop",
-      "category": "laptops",
-      "quantity":1,
-      "image": "https://3.imimg.com/data3/IO/YN/MY-8073310/dell-laptops-500x500.jpg"
-    },
-    {
-      "id": 4,
-      "title": "oneplus",
-      "price": 4000,
-      "description": "medium mobile",
-      "category": "mobiles",
-      "image": "https://www.reliancedigital.in/medias/OnePlus-Nord-CE-2-Lite-5G-Mobile-Phone-492850035-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzM0OTR8aW1hZ2UvcG5nfGltYWdlcy9oNGQvaGI2Lzk4MjA5OTUzODc0MjIucG5nfDljZGM5M2YzZTcxYzM5ZDg2ZWUyYWE3ZjlmMWUxMDNlYjM0ZjI4MzY0NmQxZTdhMjU5MzNhMTAyYjRlNjBhMzU"
-    }
+  "cart": [
+  
   ]
 }
