@@ -50,9 +50,9 @@ export const Product = () => {
 
 
                             <button onClick={() => { Filter("") }}>All</button>
-                            <button onClick={() => { Filter("mobiles") }}>Mobiles</button>
-                            <button onClick={() => { Filter("tv") }} >Tvs</button>
-                            <button onClick={() => { Filter("laptops") }}>Laptops</button>
+                            <button onClick={() => { Filter("Mobiles") }}>Mobiles</button>
+                            <button onClick={() => { Filter("Tv") }} >Tvs</button>
+                            <button onClick={() => { Filter("Laptops") }}>Laptops</button>
                             
 
 
