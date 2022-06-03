@@ -1,6 +1,7 @@
 export const ADDCART ="ADDCART"
 export const DELETECART ="DELETECART"
 export const DELITEM="DELITEM"
+export const UPDATE="UPDATE"
 export const addcart =(payload)=>{
     return {
         type:ADDCART,
@@ -22,7 +23,7 @@ export const deletecart =(index)=>{
 }
 export const updateadd = (data) => {
     return {
-        type:"UPDATEADD",
+        type:UPDATE,
         payload:data
     }
 }

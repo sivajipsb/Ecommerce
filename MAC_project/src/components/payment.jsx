@@ -1,4 +1,4 @@
-import styles from "./Checkout.module.css"
+import   "./payment.css"
 import { useNavigate } from "react-router-dom"
 
 import wallets from "./images/wallets.jpg"
@@ -29,17 +29,17 @@ const totallist=(list)=>{
 } 
     return (
         <div>
-            <div id= {styles.smiddle}>
-            <div id={styles.sone}>
-                <div id={styles.simagebox}>
-                   <div><p><span id={styles.sarrow} onClick={()=>{
+            <div id= "smiddle">
+            <div id="sone">
+                <div id="simagebox">
+                   <div><p><span id="sarrow" onClick={()=>{
                navigate(-1)}}>
                    &larr;</span> Back</p></div> 
                  
                     
                     
                     </div>
-                <div id={styles.schoose}><p>Choose a payment option</p></div>
+                <div id="schoose"><p>Choose a payment option</p></div>
  
                 {/* <b>Total Items:{cart.length}</b>
                 <h3>Total Amount:  {cart.reduce((accumulator,object)=>{
@@ -53,38 +53,38 @@ const totallist=(list)=>{
              <h3>Total (INR) :<strong>Rs {total}</strong></h3>
                
             </div>
-            <div id={styles.stwo}>
+            <div id="stwo">
 
-                <div id={styles.stwoone}>
-                 <div id={styles.sflex}  onClick={()=>{
+                <div id="stwoone">
+                 <div id="sflex"  onClick={()=>{
                navigate("/card") }}>
                         
-                <div id={styles.swallet}><img src={wallets} alt="Logo" /></div>
-                <div id={styles.stext}>Wallet <small>amazonpay,phonepe</small></div>
-                <div id={styles.sgreat}>&gt;</div>
+                <div id="swallet"><img src={wallets} alt="Logo" /></div>
+                <div id="stext">Wallet <small>amazonpay,phonepe</small></div>
+                <div id="sgreat">&gt;</div>
                 </div>
-                <div id={styles.sflex} onClick={()=>{
+                <div id="sflex" onClick={()=>{
                navigate("/card") }}>
                         
-                <div id={styles.swallet}><img src={upi} alt="Logo" /></div>
-                <div id={styles.stext}>Upi payment <small>gpaypay,phonepe</small></div>
-                <div id={styles.sgreat}>&gt;</div>
+                <div id="swallet"><img src={upi} alt="Logo" /></div>
+                <div id="stext">Upi payment <small>gpaypay,phonepe</small></div>
+                <div id="sgreat">&gt;</div>
                 </div>
 
-                <div id={styles.sflex} onClick={()=>{
+                <div id="sflex" onClick={()=>{
                navigate("/card") }}>
                         
-                <div id={styles.swallet}><img src={paytm} alt="Logo" /></div>
-                <div id={styles.stext}>Paytm Bank & wallet</div>
-                <div id={styles.sgreat}>&gt;</div>
+                <div id="swallet"><img src={paytm} alt="Logo" /></div>
+                <div id="stext">Paytm Bank & wallet</div>
+                <div id="sgreat">&gt;</div>
                  </div>
 
-                 <div id={styles.sflex} onClick={()=>{
+                 <div id="sflex" onClick={()=>{
                navigate("/card") }}>
                         
-                        <div id={styles.swallet}><img src={hdfc} alt="Logo" /></div>
-                        <div id={styles.stext}> Hdfc bank - payZapp <small></small></div>
-                        <div id={styles.sgreat}>&gt;</div>
+                        <div id="swallet"><img src={hdfc} alt="Logo" /></div>
+                        <div id="stext" >Hdfc bank - payZapp <small></small></div>
+                        <div id="sgreat">&gt;</div>
                          </div>
 
                 </div>

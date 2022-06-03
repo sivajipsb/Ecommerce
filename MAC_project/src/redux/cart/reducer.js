@@ -1,5 +1,5 @@
 // import { Product } from "../components/product";
-import { ADDCART,DELETECART,DELITEM } from "./action";
+import { ADDCART,DELETECART,DELITEM,UPDATE } from "./action";
 
 const count=[];
 export const reducer =(state=count,action)=>{
@@ -24,11 +24,11 @@ export const reducer =(state=count,action)=>{
             // return {...state,count:[...state.count.filter((x)=>{
             //     return x.id !== action.payload.id
             // })]}
-            case 'DELITEM':
+            case DELITEM:
                 return state=state.filter((x)=>{
                     return x.id !== action.payload.id
                 })
-            case "UPDATEADD":
+            case UPDATE:
                 return [...state]
                      
             

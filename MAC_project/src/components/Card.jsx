@@ -1,8 +1,7 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from 'react-redux';
-// import { deletecart } from '../redux/actions';
+
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -70,7 +69,7 @@ return (
 <br></br>
     <TextField className="inputIs" onChange={HandleChange}
       id="expiry"
-    //   label="Expiry Date"
+    
       style={{width:"430px"}}
       placeholder="none"
       type="date"
@@ -82,7 +81,7 @@ return (
       style={{width:"430px"}}
     /> 
   <br></br>
-   {/* ---------------------- Button --------------------------------------- */}
+   
 
 <br></br>
   <Stack direction="row" spacing={20}>

@@ -28,8 +28,8 @@ export const selectreducer = (state = { single: "" }, action) => {
     switch (action.type) {
         case SELECTPRODUCT:
             return { ...state, single:  action.payload  }
-        // case DELETEPRODUCT:
-        // return {  }
+        case DELETEPRODUCT:
+        return {  }
         default:
             return state
 

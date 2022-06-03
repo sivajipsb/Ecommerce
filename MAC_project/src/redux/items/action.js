@@ -4,13 +4,13 @@ export const DELETEPRODUCT = "DELETEPRODUCT"
 export const GETPRODUCT = "GETPRODUCT"
 export const LOADING = "LOADING"
 export const ERRORSTATE = "ERRORSTATE"
-
+export const FILTER="FILTER"
 export const FILTERPRODUCTS = "FILTERPRODUCTS"
 import axios from "axios"
 
 export const filterstate = (products) => {
     dispatch({
-        type: "FILTER",
+        type: FILTER,
         payload: products
 
 
