@@ -34,14 +34,14 @@ export const Product = () => {
 
 
 
-
+    // : error ? (<Error error="Somthing Went Wrong" />) :
 
    
 
 
     return (
         <>
-            {loading ? (<div><h1>...loading items</h1></div>) : (
+            {loading ? (<div><h1>...loading items</h1></div>) : error ? (<h1>some thing went wrong try again after some time </h1>) : (
                 <div>
 
                     <div>

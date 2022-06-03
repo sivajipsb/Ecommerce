@@ -10,6 +10,23 @@ import { useSelector } from "react-redux"
 export const Payment =() =>{
     const cart=useSelector((store)=>store.cart)
     const navigate=useNavigate()
+
+    var total = 0;
+const totallist=(list)=>{
+  let a = list.price
+    total=total+(+a)*list.quantity;    
+    return(
+       <>
+     
+        
+          {/* <h3><b>{list.title}</b>:<span> {a} Rs  <b>({list.quantity})</b></span></h3> */}
+        
+      
+        <br></br>
+        </>
+    
+    )
+} 
     return (
         <div>
             <div id= {styles.smiddle}>
@@ -31,6 +48,9 @@ export const Payment =() =>{
                        
                     
                 {/* },0)} Rs</h3> */}
+                {cart.map(totallist)}
+             
+             <h3>Total (INR) :<strong>Rs {total}</strong></h3>
                
             </div>
             <div id={styles.stwo}>

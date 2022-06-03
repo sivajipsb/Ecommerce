@@ -1,52 +1,96 @@
-import { useNavigate } from "react-router-dom"
-import  styles from "./card.module.css"
-
-export const Card = ()=>{
-    const navigate=useNavigate()
-    return(
-        <div>
-
-            <div id ={styles.spayment}>
-
-            
-            <div id={styles.scard}>
-            <h1>Enter Details</h1>
-            <hr></hr>
-            <div id={styles.sdet}>
-            <span><b id={styles.ssiva}> ENTER CARD NUMBER </b></span>
-
-            <br></br>
-            {/* <br></br> */}
-            <input type="number"  min="10" max="16" id={styles.sinp} placeholder="Enter card number" />
-            {/* alert("Payment is confirmed") */}
-            <br></br>
-            <div id={styles.splace}>
-                
-            <div><span><b>EXPIRY</b></span>
-            <br></br>
-            <input type="date" id={styles.sinputs} placeholder="MM/YYYY"  onChange={(e)=>e.target.value}/>
-            </div>
-            <div>
-            <span><b>CVV</b></span>
-            <br></br>
-            <input type="number" min="3" max="3" id={styles.sinputs} placeholder="CVV" />
-
-            </div>
+import React from 'react'
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { useDispatch } from 'react-redux';
+// import { deletecart } from '../redux/actions';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 
-           
-            </div>
-            <button id={styles.spaypal} onClick= { ()=>{
+
+export const Card = () => {
+  
+  const navigate = useNavigate()
+
+  const [ formData , setFormData] = React.useState({
+      name : "",
+      cardNo : "",
+      expiry :"",
+      cvv : ""
+  })
 
 
-                alert("Payment is confirmed")
-                navigate("/thank")
-            }}>Pay</button>
-            </div>
-            </div>
-            </div>
-           
-           
-        </div>
-    )
+  const HandleChange = (e) => {
+
+      const {id,value} = e.target;
+      setFormData({...formData , [id] : value})
+  }
+
+  const HandleSubmit = () => {
+
+      console.log(formData)
+      if(formData.name === "" || formData.cardNo.length === 0  || formData.cvv.length == 0  ){
+        alert("Please Fill all the Details!")
+      }
+
+      else if(formData.name !== "" && formData.cardNo.length >= 10  && formData.cvv.length == 3  ){
+          navigate("/thank")
+      }
+      else if(formData.cardNo.length <= 10 && formData.name !== ""  && formData.cvv.length == 3){
+           alert("Please check Card Number & number should be more than 10 numbers")
+      }
+      else if(formData.cvv.length !== 3 && formData.name !== "" && formData.cardNo.length !== 0){
+        alert("Please check CVV ")
+   }
+  }
+
+return (
+  <>
+  <div className="paymentBox">
+  <h1 id="mypay">YOUR CARD DETAILS</h1>
+  <Box
+    sx={{
+      alignItems: 'center',
+      '& > :not(style)': { m: 1 },
+    }}
+  >
+    <TextField className="inputIs" onChange={HandleChange}
+      id="name"
+      label="Name"
+      style={{width:"430px"}}
+    /> 
+<br></br>
+   <TextField className="inputIs" onChange={HandleChange}
+      id="cardNo"
+      label="Card Number"
+      style={{width:"430px"}}
+    /> 
+<br></br>
+    <TextField className="inputIs" onChange={HandleChange}
+      id="expiry"
+    //   label="Expiry Date"
+      style={{width:"430px"}}
+      placeholder="none"
+      type="date"
+    /> 
+<br></br>
+    <TextField className="inputIs" onChange={HandleChange}
+      id="cvv"
+      label="CVV"
+      style={{width:"430px"}}
+    /> 
+  <br></br>
+   {/* ---------------------- Button --------------------------------------- */}
+
+<br></br>
+  <Stack direction="row" spacing={20}>
+    <Button  style={{marginLeft:"630px"}} onClick={HandleSubmit} id='paymentBtn' variant="contained">SUBMIT</Button>
+  </Stack>
+
+  </Box>
+  </div>
+  </>
+);
 }

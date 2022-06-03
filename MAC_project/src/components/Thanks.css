@@ -1,0 +1,36 @@
+#sthanks{
+    height:400px;
+    width:90%;
+    /* border:1px solid red; */
+    margin:auto;
+    cursor:pointer;
+}
+#sbooking{
+    height:40%;
+    width:50%;
+    /* border: 1px solid yellow; */
+    margin: auto;
+    /* margin-top: 5%; */
+    /* background-color: #ff385c; */
+    border-radius: 10px;
+    padding-top: 1px;
+    
+}
+#sconfir{
+    font-size: 200%;
+    font-weight: bolder;
+    /* margin-left: 20%; */
+    font-style:oblique;
+   
+  
+    margin-top: 8%;
+   
+}
+
+#order{
+    height: 300px;
+    width:400px;
+    /* border:1px solid red; */
+    margin-left: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
