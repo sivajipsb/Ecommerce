@@ -1,5 +1,5 @@
 // import { Product } from "../components/product";
-import { ADDCART,DELETECART,DELITEM,UPDATE } from "./action";
+import { ADDCART,DELETECART,DELITEM,UPDATE,SETCART } from "./action";
 
 const count=[];
 export const reducer =(state=count,action)=>{
@@ -31,7 +31,12 @@ export const reducer =(state=count,action)=>{
             case UPDATE:
                 return [...state]
                      
-            
+            case SETCART:
+                return [
+                    ...state,
+                    action.payload
+                ]
+
             
         default:
             return state
