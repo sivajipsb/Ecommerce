@@ -41,7 +41,7 @@ export const Product = () => {
 
     return (
         <>
-            {loading ? (<div><h1>...loading items</h1></div>) : error ? (<h1>some thing went wrong try again after some time </h1>) : (
+            {loading ? (<div><h1>...loading items</h1></div>) : error ? (<h1>some thing went wrong try again after some time ......</h1>) : (
                 <div>
 
                     <div>

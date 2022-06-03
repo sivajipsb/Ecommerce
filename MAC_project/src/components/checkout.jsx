@@ -1,10 +1,5 @@
 
-
-
-
-
 import React from 'react'
-
 import { useNavigate } from "react-router-dom";
 // import { useDispatch } from 'react-redux';
 // import { deletecart } from '../redux/actions';
@@ -54,7 +49,7 @@ export const Checkout = () => {
 return (
   <>
   <div className="paymentBox">
-  <h1 id="mypay">Enter your address  Details</h1>
+  <h1 id="mypay">Enter Your Address  Details</h1>
   <Box
     sx={{
       alignItems: 'center',
@@ -69,7 +64,7 @@ return (
 <br></br>
    <TextField className="inputIs" onChange={HandleChange}
       id="phonenumber"
-      label="phonenumber"
+      label="Phonenumber"
       style={{width:"430px"}}
     /> 
 <br></br>
@@ -77,23 +72,22 @@ return (
 {/* <br></br> */}
     <TextField className="inputIs" onChange={HandleChange}
       id="city"
-      label="city"
+      label="City"
       style={{width:"430px"}}
     /> 
   <br></br>
 
   <TextField className="inputIs" onChange={HandleChange}
       id="state"
-      label="state"
+      label="State"
       style={{width:"430px"}}
-      // placeholder="none"
-      // type="date"
+     
     /> 
-   {/* ---------------------- Button --------------------------------------- */}
+ 
 
 <br></br>
   <Stack direction="row" spacing={20}>
-    <Button  style={{marginLeft:"630px"}} onClick={HandleSubmit} id='paymentBtn' variant="contained">SUBMIT</Button>
+    <Button  style={{marginLeft:"630px"}} onClick={HandleSubmit} color="success" id='paymentBtn' variant="contained">SUBMIT</Button>
   </Stack>
 
   </Box>

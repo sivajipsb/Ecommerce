@@ -74,7 +74,7 @@ const totallist=(list)=>{
               
                  {cart.map(totallist)}
              
-                <h3>Total (INR) :<strong>Rs {total}</strong></h3>
+                <h3>Total Amount :<strong>Rs {total}</strong></h3>
                 
                 <br></br>
                 <br></br>
