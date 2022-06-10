@@ -43,8 +43,10 @@ export const Navbar = ()=>{
                 <div id="navbarone">
                 <div ><Link to ="/" style={{textDecoration:"none"}}><b>Products</b></Link></div>
                 {/* <div><Link to ="/product"  style={{textDecoration:"none"}}><b>Products</b></Link></div> */}
-                <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>About</b></Link></div>
+               
                 <div><Link to ="/gotocart" style={{textDecoration:"none"}}><b>CartPage</b></Link></div>
+                <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>login</b></Link></div>
+                {/* <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>signup</b></Link></div> */}
                 </div>
                  {/* <h1>gowtham sai shopping mall </h1> */}
                 {/* <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({counting.length})  </button></div> */}

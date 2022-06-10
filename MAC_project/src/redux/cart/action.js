@@ -29,37 +29,6 @@ export const updateadd = (data) => {
         payload:data
     }
 }
-// export const update = (e,cart,value) => (dispatch) => {
-//     console.log(cart,"sivajicart")
-//     let x = cart.map((ex) => {
-//         if(ex.id == e.id){
-//             if(ex.quantity == 1 && value == -1){
-//                 ex.quantity = ex.quantity;
-//             }
-//             else{
-//                 ex.quantity = ex.quantity+value;
-//             }
-//         }
-//     })
-//     dispatch(updateadd(x))
-// }
-// export const update = (e,sivaji,value) => (dispatch) => {
-//     console.log(sivaji,"sivajicartssssss",e.quantity,"e")
-//     let x = sivaji.map((ex) => {
-//         if(ex.id == e.id){
-//             if(ex.quantity == 1 && value == -1){
-//                 ex.quantity = ex.quantity;
-//             }
-//             else{
-//                 ex.quantity = ex.quantity+value;
-//             }
-//         }
-//     })
-//     console.log(x,e,"xxxx")
-//     dispatch(put_api(x))
-//     // console.log(dispatch(put_api(e)))
-//     // console.log(dispatch(updateadd(x)),"dispatch updateedd")
-// }
 
 
 export const put_api = (e,sivaji,value) => (dispatch) => {
@@ -73,7 +42,7 @@ export const put_api = (e,sivaji,value) => (dispatch) => {
             }
         }
     })
-    // dispatch(loading())
+    
 
     axios.put(`https://macsivaji.herokuapp.com/cart/${e.id}`,e)
         // dispatch(setproduct(data))
@@ -128,6 +97,7 @@ export const delete_api = (products) => (dispatch) => {
     // });
 
 }
+// 
 
 
 export const setcart = (payload) => {

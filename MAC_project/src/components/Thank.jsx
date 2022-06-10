@@ -2,7 +2,8 @@ import  "./Thanks.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react"
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import {cart_api,delete_api,getcart_api,} from "../redux/cart/action"
+import axios from "axios"
 
 export const Thank = ()=>{
    
@@ -13,7 +14,10 @@ const dispatch=useDispatch()
     useEffect(()=>{
         // dispatch(api_id(id))
         dispatch(getcart_api())
-              
+        // dispatch(delete_cart())
+        // axios
+        // .delete("https://macsivaji.herokuapp.com/cart")
+      
           
       },[])
     var total = 0;
@@ -40,6 +44,7 @@ const totallist=(list)=>{
 
             <div id="sthanks" onClick = {
                 ()=>{
+                    // dispatch(delete_api(sivaji))
                     navigate("/")
                 }
             }>

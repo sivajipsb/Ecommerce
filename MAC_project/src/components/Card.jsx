@@ -41,7 +41,7 @@ export const Card = () => {
            alert("Please check Card Number & number should be more than 10 numbers")
       }
       else if(formData.cvv.length !== 3 && formData.name !== "" && formData.cardNo.length !== 0){
-        alert("Please check CVV ")
+        alert("Please check CVV and it should be 3 digits")
    }
   }
 

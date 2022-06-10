@@ -14,7 +14,7 @@ export const Product_id =()=>{
     const dispatch=useDispatch()
     const count=useSelector((store)=>store.count)
     const me=useSelector((store)=>store.single.single)
-    const[cartBtn,setcartBtn]=useState("Add To Cart")
+    // const[cartBtn,setcartBtn]=useState("Add To Cart")
     const sivaji=useSelector((store)=>store.cart.sivaji)
        
     var {id} =useParams();
@@ -28,7 +28,7 @@ export const Product_id =()=>{
       dispatch(getcart_api())
             
         
-    })
+    },[])
 
     var handleCart=(data)=>{
        
@@ -44,15 +44,15 @@ export const Product_id =()=>{
                 // console.log(dispatch(getcart_api()))
               
         
-                setcartBtn("Remove from cart")
+                // setcartBtn("Remove from cart")
             }
-            else{
-                // dispatch(delItem(data))
+            // else{
+            //     // dispatch(delItem(data))
                    
-                    dispatch(delete_api(data))
-                    // dispatch(getcart_api())
-                setcartBtn("Add To Cart")
-            }
+            //         dispatch(delete_api(data))
+            //         // dispatch(getcart_api())
+            //     setcartBtn("Add To Cart")
+            // }
         
     }
     // useEffect(()=>{
@@ -75,11 +75,11 @@ export const Product_id =()=>{
                     <p><b>{me.title}</b></p>
                     <p><b>{me.description}</b></p>
                     <p><b> Price  : {me.price} RS</b></p>
-                    <button  id="button" onClick={()=>handleCart(me)  }>{cartBtn}</button>
+                    {/* <button  id="button" onClick={()=>handleCart(me)  }>{cartBtn}</button> */}
                     {/* <button  id="button" onClick={()=>handlecart(me)  }>Add to cart</button> */}
-              
-                   <Link to = "/gotocart" style={{textDecoration:"none"}}> <button  id="button" >gotocart</button></Link>
-
+                    {/* <button  id="button" onClick={()=>handleCart(me)  }>{cartBtn}</button> */}
+                   {/* <Link to = "/gotocart" style={{textDecoration:"none"}}> <button  id="button" >gotocart</button></Link> */}
+                    <button  id="button" onClick={()=> dispatch(cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button>
                 </div>
             </div>
         </div>)}
