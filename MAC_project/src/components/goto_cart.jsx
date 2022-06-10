@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from "react-redux"
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import { Navbar } from "./navbar";
 import "./goto.css"
-import { deletecart } from "../redux/cart/action";
-import { update } from "../redux/cart/action";
+import { deletecart, put_api } from "../redux/cart/action";
+// import { update } from "../redux/cart/action";
+import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
 export const Goto_cart =()=>{
-const cart=useSelector((store)=>store.cart)
+const cart=useSelector((store)=>store.cart.count)
+const sivaji=useSelector((store)=>store.cart.sivaji)
 const dispatch=useDispatch()
-console.log(cart,"cart",typeof(cart))
+// console.log(cart,"cart",typeof(cart))
 var total = 0;
 const totallist=(list)=>{
   let a = list.price
@@ -24,7 +27,12 @@ const totallist=(list)=>{
     
     )
 } 
-
+useEffect(()=>{
+  // dispatch(api_id(id))
+  dispatch(getcart_api())
+        
+    
+},[])
     return (
       <>
       <Navbar/>
@@ -37,7 +45,7 @@ const totallist=(list)=>{
           <div id="ones">
 
           
-            {cart.map((e,index)=>{
+            {sivaji.map((e,index)=>{
                 return(
                     <div>
                     
@@ -46,13 +54,18 @@ const totallist=(list)=>{
                   
                     <p><b> Price  : {e.price} RS</b></p>
                    
-                     <button onClick={() => dispatch(update(e,cart,1))}   >+</button>
+                     {/* <button onClick={() => dispatch(update(e,cart,1))}   >+</button>
                         <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
-                        <button onClick={() => dispatch(update(e,cart,-1))} >-</button>
+                        <button onClick={() => dispatch(update(e,cart,-1))} >-</button> */}
+
+                <button onClick={() => dispatch(put_api(e,sivaji,1))}   >+</button>
+                <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
+                <button onClick={() => dispatch(put_api(e,sivaji,-1))} >-</button>
                   
                   <br></br>
                    <button id="delete" onClick={()=>{
-                      dispatch(deletecart(index))
+                      dispatch(deletecart(e))
+                      dispatch(delete_api(e))
                     }}> delete</button>
                    <div ><h3>Total : {(+e.quantity)*(+(e.price))}</h3></div>
                    
@@ -72,14 +85,14 @@ const totallist=(list)=>{
             
              <div id="ship">
               
-                 {cart.map(totallist)}
+                 {sivaji.map(totallist)}
              
                 <h3>Total Amount :<strong>Rs {total}</strong></h3>
                 
                 <br></br>
                 <br></br>
               
-                <Link to ="/checkout" style={{textDecoration:"none"}}> <button id="act">Click Here To CheckoutPage</button></Link>
+                <Link to ="/checkout" style={{textDecoration:"none"}}> <button  disabled={sivaji.length==0}id="act">Click Here To CheckoutPage</button></Link>
                
             </div>
            

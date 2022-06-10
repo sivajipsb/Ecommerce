@@ -8,42 +8,59 @@ import { useDispatch,useSelector } from "react-redux";
 import { Navbar } from "./navbar";
 import { selectproduct,deleteproduct} from "../redux/items/action";
 import { api_id } from "../redux/items/action";
-import {cart_api,delete_api} from "../redux/cart/action"
+import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
 export const Product_id =()=>{
 
     const dispatch=useDispatch()
     const count=useSelector((store)=>store.count)
     const me=useSelector((store)=>store.single.single)
     const[cartBtn,setcartBtn]=useState("Add To Cart")
+    const sivaji=useSelector((store)=>store.cart.sivaji)
        
     var {id} =useParams();
     
-
+// const sivajidata=()=>{
+//     getcart_api()
+// }
    
     useEffect(()=>{
       dispatch(api_id(id))
-            
+      dispatch(getcart_api())
             
         
-    },[])
+    })
 
-    const handleCart=(data)=>{
+    var handleCart=(data)=>{
        
             if(cartBtn === 'Add To Cart'){
-                dispatch(addcart(data))
+               
+                // dispatch(addcart(data))
                 dispatch(cart_api(data))
+
+                // console.log(dispatch(addcart(data)),"sivaji vasthunna cart data ")
+                // console.log(dispatch(getcart_api,"sivaji vasthunna get data "))
+                
+                // dispatch(getcart_api())
+                // console.log(dispatch(getcart_api()))
+              
         
                 setcartBtn("Remove from cart")
             }
             else{
-                dispatch(delItem(data))
+                // dispatch(delItem(data))
                    
                     dispatch(delete_api(data))
+                    // dispatch(getcart_api())
                 setcartBtn("Add To Cart")
             }
         
     }
-    
+    // useEffect(()=>{
+    //     dispatch(api_id(id))
+    //     dispatch(getcart_api())
+              
+          
+    //   })
     
     return (
         <>

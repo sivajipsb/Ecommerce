@@ -1,14 +1,27 @@
 import  "./Thanks.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react"
+import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
 
 export const Thank = ()=>{
-    const cart=useSelector((store)=>store.cart)
+   
+    const cart=useSelector((store)=>store.cart.count)
+const sivaji=useSelector((store)=>store.cart.sivaji)
+const dispatch=useDispatch()
     const navigate= useNavigate()
+    useEffect(()=>{
+        // dispatch(api_id(id))
+        dispatch(getcart_api())
+              
+          
+      },[])
     var total = 0;
 const totallist=(list)=>{
   let a = list.price
     total=total+(+a)*list.quantity;    
+
+   
     return(
        <>
      
@@ -36,7 +49,7 @@ const totallist=(list)=>{
                </div>
                <div id="order">
                    
-                   {cart.map(totallist)}
+                   {sivaji.map(totallist)}
              
              <h3>Total Amount :<strong>Rs {total}</strong></h3>
                 </div> 

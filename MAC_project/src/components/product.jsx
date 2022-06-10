@@ -7,9 +7,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { setproduct } from "../redux/items/action";
 import { api } from "../redux/items/action";
 import { filterstate, filterProducts } from "../redux/items/action";
+import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
 export const Product = () => {
-
+    
     const { products, loading, error, filters } = useSelector((store) => store.items)
+    const[state,setstate]=useState(products)
+    // const sivaji=useSelector((store) => store.items.products)
+    // console.log(sivaji.length,"sivaji")
     const dispatch = useDispatch()
     // const[data,setdata]=useState([])
     // const[state,setstate]=useState(products)
@@ -18,12 +22,13 @@ export const Product = () => {
     useEffect(() => {
 
         dispatch(api())
+        dispatch(getcart_api())
 
 
     }, [])
     // const products=useSelector((store)=>store.items.products)
     
-    console.log(products, "products")
+    // console.log(products, "products",products.length)
 
     const Filter = (item) => {
         // const updatedlist = products.filter((x) => x.category === item);
@@ -32,7 +37,20 @@ export const Product = () => {
     }
 
 
-
+    function handlesort(term){
+        if(term==="lh"){
+          let x=products.sort((a,b)=> a.price-b.price)
+        //   console.log(x)
+        //    setdata([...x])
+           setstate([...x])
+        }
+        if(term==="hl"){
+            let x=products.sort((a,b)=> b.price-a.price)
+            console.log(x)
+            //  setdata([...x])
+            setstate([...x])
+          }
+    }
 
     // : error ? (<Error error="Somthing Went Wrong" />) :
 
@@ -53,7 +71,8 @@ export const Product = () => {
                             <button onClick={() => { Filter("Mobiles") }}>Mobiles</button>
                             <button onClick={() => { Filter("Tv") }} >Tvs</button>
                             <button onClick={() => { Filter("Laptops") }}>Laptops</button>
-                            
+                            <button onClick={()=>handlesort("lh")}>lowtohigh</button>
+                             <button onClick={()=>handlesort("hl")}>hightolow</button> 
 
 
 

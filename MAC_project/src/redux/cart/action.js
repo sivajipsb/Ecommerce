@@ -10,10 +10,10 @@ export const addcart =(payload)=>{
         payload:payload
     }
 }
-export const deletecart =(index)=>{
+export const deletecart =(e)=>{
     return {
         type:DELETECART,
-        payload:index
+        payload:e
     }
 }
     export const delItem=(data)=>{
@@ -29,9 +29,41 @@ export const updateadd = (data) => {
         payload:data
     }
 }
-export const update = (e,cart,value) => (dispatch) => {
-    console.log(cart,"sivajicart")
-    let x = cart.map((ex) => {
+// export const update = (e,cart,value) => (dispatch) => {
+//     console.log(cart,"sivajicart")
+//     let x = cart.map((ex) => {
+//         if(ex.id == e.id){
+//             if(ex.quantity == 1 && value == -1){
+//                 ex.quantity = ex.quantity;
+//             }
+//             else{
+//                 ex.quantity = ex.quantity+value;
+//             }
+//         }
+//     })
+//     dispatch(updateadd(x))
+// }
+// export const update = (e,sivaji,value) => (dispatch) => {
+//     console.log(sivaji,"sivajicartssssss",e.quantity,"e")
+//     let x = sivaji.map((ex) => {
+//         if(ex.id == e.id){
+//             if(ex.quantity == 1 && value == -1){
+//                 ex.quantity = ex.quantity;
+//             }
+//             else{
+//                 ex.quantity = ex.quantity+value;
+//             }
+//         }
+//     })
+//     console.log(x,e,"xxxx")
+//     dispatch(put_api(x))
+//     // console.log(dispatch(put_api(e)))
+//     // console.log(dispatch(updateadd(x)),"dispatch updateedd")
+// }
+
+
+export const put_api = (e,sivaji,value) => (dispatch) => {
+    let x = sivaji.map((ex) => {
         if(ex.id == e.id){
             if(ex.quantity == 1 && value == -1){
                 ex.quantity = ex.quantity;
@@ -41,10 +73,24 @@ export const update = (e,cart,value) => (dispatch) => {
             }
         }
     })
+    // dispatch(loading())
+
+    axios.put(`https://macsivaji.herokuapp.com/cart/${e.id}`,e)
+        // dispatch(setproduct(data))
+        .then((res) => {
+                    console.log("put data  ", res.data);
+                  
+                    // getcart_api()
+                    // console.log(dispatch(getcart_api()),"heeeeee")
+
+
+    // }).catch((error) => {
+    //     dispatch(errorstate(error))
+    })
+    // .then(setcart()).then(())
     dispatch(updateadd(x))
+   
 }
-
-
 
 export const cart_api = (products) => (dispatch) => {
 
@@ -53,15 +99,19 @@ export const cart_api = (products) => (dispatch) => {
     axios.post("https://macsivaji.herokuapp.com/cart",products)
         // dispatch(setproduct(data))
         .then((res) => {
-                    console.log("Add to cart", res.data);
+                    // console.log("Add to cart mine  ", res.data);
                   
-                  
+                    // getcart_api()
+                    // console.log(dispatch(getcart_api()),"heeeeee")
 
-    }).catch((error) => {
-        dispatch(errorstate(error))
+
+    // }).catch((error) => {
+    //     dispatch(errorstate(error))
     })
-
+    // .then(setcart()).then(())
+   
 }
+
 
 export const delete_api = (products) => (dispatch) => {
 
@@ -70,12 +120,12 @@ export const delete_api = (products) => (dispatch) => {
      axios
     .delete(`https://macsivaji.herokuapp.com/cart/${products.id}`)
     .then((res) => {
-      console.log("remove to cart", res.data);
-      console.log(products.id,"dataid")
+    //   console.log("remove to cart", res.data);
+    //   console.log(products.id,"dataid")
     })
-    .catch((error) => {
-      console.log(error);
-    });
+    // .catch((error) => {
+    //   console.log(error);
+    // });
 
 }
 
@@ -91,11 +141,12 @@ export const getcart_api = () => (dispatch) => {
     // dispatch(loading())
 
     axios.get("https://macsivaji.herokuapp.com/cart").then(({ data }) => {
-        dispatch(cart(data))
-
-
-    }).catch((error) => {
-        dispatch(errorstate(error))
+        dispatch(setcart(data))
+        // console.log(dispatch(setcart(data)),"vasthunna")
     })
+
+    //  }).catch((error) => {
+    //     dispatch(errorstate(error))
+    // })
 
 }

@@ -1,16 +1,26 @@
 import   "./payment.css"
 import { useNavigate } from "react-router-dom"
-
+import { useEffect } from "react"
 import wallets from "./images/wallets.jpg"
 import upi from "./images/upi.png"
 import paytm from "./images/paytm.png"
 import hdfc from "./images/hdfc.png"
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
+import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import { useDispatch, useSelector } from "react-redux"
 
 export const Payment =() =>{
-    const cart=useSelector((store)=>store.cart)
+    const cart=useSelector((store)=>store.cart.count)
+    const sivaji=useSelector((store)=>store.cart.sivaji)
     const navigate=useNavigate()
-
+    const dispatch=useDispatch()
+    useEffect(()=>{
+        // dispatch(api_id(id))
+        dispatch(getcart_api())
+              
+          
+      },[])
+      
     var total = 0;
 const totallist=(list)=>{
   let a = list.price
@@ -48,7 +58,7 @@ const totallist=(list)=>{
                        
                     
                 {/* },0)} Rs</h3> */}
-                {cart.map(totallist)}
+                {sivaji.map(totallist)}
              
              <h3>Total (INR) :<strong>Rs {total}</strong></h3>
                

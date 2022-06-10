@@ -3,7 +3,8 @@ import { SETPRODUCT, SELECTPRODUCT, DELETEPRODUCT, LOADING, ERRORSTATE,  FILTERP
 
 const initstate = { products: [], loading: false, error: false, filters: "" }
 export const itemreducer = (state = initstate, action) => {
-
+    //   console.log()
+    // console.log(state,"changeditesm",state.products.length)
     switch (action.type) {
         case SETPRODUCT:
             return { ...state, products: action.payload, loading: false, error: false }
@@ -24,7 +25,7 @@ export const itemreducer = (state = initstate, action) => {
 
 
 export const selectreducer = (state = { single: "" }, action) => {
-    console.log(state)
+    // console.log(state)
     switch (action.type) {
         case SELECTPRODUCT:
             return { ...state, single:  action.payload  }
