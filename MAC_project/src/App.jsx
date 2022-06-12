@@ -8,6 +8,8 @@ import { Payment } from "./components/payment"
 import {Card} from "./components/Card"
 import { Thank } from "./components/Thank"
 import {Checkout} from "./components/checkout"
+import {SignUp} from "./components/signup"
+import {Login} from "./components/login"
 function App() {
  
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/card" element={<Card/>}></Route>
         <Route path="/thank" element={<Thank/>}></Route>
         <Route path="/checkout" element={<Checkout/>}></Route>
+        <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<SignUp/>} />
         
       </Routes>
      

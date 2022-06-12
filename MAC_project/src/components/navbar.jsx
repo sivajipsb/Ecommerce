@@ -45,7 +45,7 @@ export const Navbar = ()=>{
                 {/* <div><Link to ="/product"  style={{textDecoration:"none"}}><b>Products</b></Link></div> */}
                
                 <div><Link to ="/gotocart" style={{textDecoration:"none"}}><b>CartPage</b></Link></div>
-                <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>login</b></Link></div>
+                <div><Link to ="/signup" style={{textDecoration:"none"}}><b>Signup</b></Link></div>
                 {/* <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>signup</b></Link></div> */}
                 </div>
                  {/* <h1>gowtham sai shopping mall </h1> */}
