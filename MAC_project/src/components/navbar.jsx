@@ -70,7 +70,7 @@ export const Navbar = ({setLog,log})=>{
             {/* <img src ="https://swall.teahub.io/photos/small/213-2136622_electronics-products.jpg" height="500px" width="100%"  /> */}
             {/* <Product/> */}
             <div style={{display:"flex",paddingRight:"50px"}}>
-              {console.log(log)}
+              {/* {console.log(log)} */}
              
               
               {/* <CartBtn></CartBtn> */}

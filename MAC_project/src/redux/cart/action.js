@@ -51,7 +51,7 @@ export const Put_api = (e,sivaji,value) => (dispatch) => {
     axios.put(`https://macsivaji.herokuapp.com/cart/${e.id}`,e)
         // dispatch(setproduct(data))
         .then((res) => {
-                    console.log("put data  ", res.data);
+                    // console.log("put data  ", res.data);
                   
                     // getcart_api()
                     // console.log(dispatch(getcart_api()),"heeeeee")

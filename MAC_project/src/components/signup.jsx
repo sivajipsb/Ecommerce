@@ -51,7 +51,7 @@ export const SignUp = () => {
       <br />
       <Button onClick={handleSubmit} style={{width:"30%",height:"50px"}} variant="contained">Sign Up</Button>
       <br />
-      <Link to="/Login">Already have an Account</Link>
+      {/* <Link to="/Login">Already have an Account</Link> */}
     </div>
   )
 }
