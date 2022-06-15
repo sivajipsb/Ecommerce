@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import { Navbar } from "./navbar";
 import "./goto.css"
-import { deletecart, put_api } from "../redux/cart/action";
-// import { update } from "../redux/cart/action";
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import { Deletecart, Put_api } from "../redux/cart/action";
+
+import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 export const Goto_cart =()=>{
 const cart=useSelector((store)=>store.cart.count)
 const sivaji=useSelector((store)=>store.cart.sivaji)
@@ -29,7 +29,7 @@ const totallist=(list)=>{
 } 
 useEffect(()=>{
   // dispatch(api_id(id))
-  dispatch(getcart_api())
+  dispatch(Getcart_api())
         
     
 },[])
@@ -58,14 +58,14 @@ useEffect(()=>{
                         <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
                         <button onClick={() => dispatch(update(e,cart,-1))} >-</button> */}
 
-                <button onClick={() => dispatch(put_api(e,sivaji,1))}   >+</button>
+                <button onClick={() => dispatch(Put_api(e,sivaji,1))}   >+</button>
                 <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
-                <button onClick={() => dispatch(put_api(e,sivaji,-1))} >-</button>
+                <button onClick={() => dispatch(Put_api(e,sivaji,-1))} >-</button>
                   
                   <br></br>
                    <button id="delete" onClick={()=>{
-                      dispatch(deletecart(e))
-                      dispatch(delete_api(e))
+                      dispatch(Deletecart(e))
+                      dispatch(Delete_api(e))
                     }}> delete</button>
                    <div ><h3>Total : {(+e.quantity)*(+(e.price))}</h3></div>
                    

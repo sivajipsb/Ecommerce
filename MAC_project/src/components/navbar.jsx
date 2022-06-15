@@ -3,7 +3,7 @@ import "./navbar.css"
 import { useDispatch,useSelector } from "react-redux";
 import { Product } from "./product";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 import {  faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -33,7 +33,7 @@ export const Navbar = ({setLog,log})=>{
 //         setset(data)
 //         })
 
-         dispatch(getcart_api())
+         dispatch(Getcart_api())
     },[])
  
     return (

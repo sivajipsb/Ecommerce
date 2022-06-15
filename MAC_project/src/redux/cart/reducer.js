@@ -51,16 +51,7 @@ export const reducer = (state=count,action)=>{
     
     switch(action.type)
     {
-        case LOGIN:
-            return {
-                ...state,
-                user:payload,
-                isLoggedIn: true
-            }
-          
-
-            case SIGNUP:
-                return { "users": payload};
+       
         case ADDCART:
                  
                 
@@ -109,6 +100,16 @@ export const reducer = (state=count,action)=>{
                     // ...state,sivaji:[...state.count,action.payload]
     
                     }
+                    case LOGIN:
+                        return {
+                            ...state,
+                            user:payload,
+                            isLoggedIn: true
+                        }
+                      
+            
+                        case SIGNUP:
+                            return { "users": payload};
 
             
         default:

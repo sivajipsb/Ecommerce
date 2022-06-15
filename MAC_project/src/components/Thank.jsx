@@ -2,7 +2,7 @@ import  "./Thanks.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react"
-import {cart_api,delete_api,getcart_api,} from "../redux/cart/action"
+import {Cart_api,Delete_api,Getcart_api,} from "../redux/cart/action"
 import axios from "axios"
 
 export const Thank = ()=>{
@@ -13,7 +13,7 @@ const dispatch=useDispatch()
     const navigate= useNavigate()
     useEffect(()=>{
         // dispatch(api_id(id))
-        dispatch(getcart_api())
+        dispatch(Getcart_api())
         // dispatch(delete_cart())
         // axios
         // .delete("https://macsivaji.herokuapp.com/cart")

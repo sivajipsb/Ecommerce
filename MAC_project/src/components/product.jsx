@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setproduct } from "../redux/items/action";
 import { api } from "../redux/items/action";
 import { filterstate, filterProducts } from "../redux/items/action";
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 export const Product = () => {
     
     const { products, loading, error, filters } = useSelector((store) => store.items)
@@ -22,7 +22,7 @@ export const Product = () => {
     useEffect(() => {
 
         dispatch(api())
-        dispatch(getcart_api())
+        dispatch(Getcart_api())
 
 
     }, [])

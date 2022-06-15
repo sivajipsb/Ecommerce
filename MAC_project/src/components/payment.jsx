@@ -6,7 +6,7 @@ import upi from "./images/upi.png"
 import paytm from "./images/paytm.png"
 import hdfc from "./images/hdfc.png"
 // import { useSelector } from "react-redux"
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 import { useDispatch, useSelector } from "react-redux"
 
 export const Payment =() =>{
@@ -16,7 +16,7 @@ export const Payment =() =>{
     const dispatch=useDispatch()
     useEffect(()=>{
         // dispatch(api_id(id))
-        dispatch(getcart_api())
+        dispatch(Getcart_api())
               
           
       },[])

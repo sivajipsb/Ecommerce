@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios"
 import {Link} from "react-router-dom"
 import "./productid.css"
-import { addcart,delItem } from "../redux/cart/action";
+import { Addcart,DelItem } from "../redux/cart/action";
 import { useDispatch,useSelector } from "react-redux";
 import { Navbar } from "./navbar";
 import { selectproduct,deleteproduct} from "../redux/items/action";
 import { api_id } from "../redux/items/action";
-import {cart_api,delete_api,getcart_api} from "../redux/cart/action"
+import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 import { useNavigate } from "react-router-dom";
 export const Product_id =({log})=>{
     
@@ -26,7 +26,7 @@ export const Product_id =({log})=>{
    
     useEffect(()=>{
       dispatch(api_id(id)) 
-      dispatch(getcart_api())
+      dispatch(Getcart_api())
             
         
     })
@@ -79,7 +79,7 @@ export const Product_id =({log})=>{
                     {log ? 
                             // <button onClick={ dispatch(cart_api(me))} className='btn btn-outline-primary my-5'>addtocart</button>
 
-                            <button  id="button" onClick={()=> dispatch(cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button>
+                            <button  id="button" onClick={()=> dispatch(Cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button>
                        :
                             <div>
                                  <button className='btn btn-outline-primary my-5'  data-bs-toggle="modal" data-bs-target="#thankyouModal">Add To Cart</button>

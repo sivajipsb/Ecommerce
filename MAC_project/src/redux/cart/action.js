@@ -7,39 +7,27 @@ export const LOGIN ="LOGIN"
 export const SIGNUP ="SIGNUP"
 import axios from "axios"
 
-export const loginRequest = (user) => {
-    return {
-        type: LOGIN,
-        payload: user
-    }
-}
 
-export const signupRequest = (user) => {
-    return {
-        type: SIGNUP,
-        payload: user
-    }
-}
-export const addcart =(payload)=>{
+export const Addcart =(payload)=>{
     return {
         type:ADDCART,
         payload:payload
     }
 }
-export const deletecart =(e)=>{
+export const Deletecart =(e)=>{
     return {
         type:DELETECART,
         payload:e
     }
 }
-    export const delItem=(data)=>{
+    export const DelItem=(data)=>{
         return{
             type:DELITEM,
             payload:data
         }
     
 }
-export const updateadd = (data) => {
+export const Updateadd = (data) => {
     return {
         type:UPDATE,
         payload:data
@@ -47,7 +35,7 @@ export const updateadd = (data) => {
 }
 
 
-export const put_api = (e,sivaji,value) => (dispatch) => {
+export const Put_api = (e,sivaji,value) => (dispatch) => {
     let x = sivaji.map((ex) => {
         if(ex.id == e.id){
             if(ex.quantity == 1 && value == -1){
@@ -73,11 +61,11 @@ export const put_api = (e,sivaji,value) => (dispatch) => {
     //     dispatch(errorstate(error))
     })
     // .then(setcart()).then(())
-    dispatch(updateadd(x))
+    dispatch(Updateadd(x))
    
 }
 
-export const cart_api = (products) => (dispatch) => {
+export const Cart_api = (products) => (dispatch) => {
 
     // dispatch(loading())
 
@@ -98,7 +86,7 @@ export const cart_api = (products) => (dispatch) => {
 }
 
 
-export const delete_api = (products) => (dispatch) => {
+export const Delete_api = (products) => (dispatch) => {
 
     // dispatch(loading())
 
@@ -116,18 +104,18 @@ export const delete_api = (products) => (dispatch) => {
 // 
 
 
-export const setcart = (payload) => {
+export const Setcart = (payload) => {
     return {
         type: SETCART,
         payload: payload
     }
 }
-export const getcart_api = () => (dispatch) => {
+export const Getcart_api = () => (dispatch) => {
 
     // dispatch(loading())
 
     axios.get("https://macsivaji.herokuapp.com/cart").then(({ data }) => {
-        dispatch(setcart(data))
+        dispatch(Setcart(data))
         // console.log(dispatch(setcart(data)),"vasthunna")
     })
 
@@ -135,4 +123,18 @@ export const getcart_api = () => (dispatch) => {
     //     dispatch(errorstate(error))
     // })
 
+}
+
+export const LoginRequest = (user) => {
+    return {
+        type: LOGIN,
+        payload: user
+    }
+}
+
+export const SignupRequest = (user) => {
+    return {
+        type: SIGNUP,
+        payload: user
+    }
 }
