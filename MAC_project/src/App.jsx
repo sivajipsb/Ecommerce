@@ -10,8 +10,15 @@ import { Thank } from "./components/Thank"
 import {Checkout} from "./components/checkout"
 import {SignUp} from "./components/signup"
 import {Login} from "./components/login"
-function App() {
- 
+import {useState,useEffect} from "react"
+function App() { 
+  const [log,setLog] = useState(false);
+  useEffect(() => {
+    var a = JSON.parse(localStorage.getItem("app")) || null;
+    if(a){
+      setLog(true)
+    }
+  })
 
   return (
     <div className="App">
@@ -24,7 +31,7 @@ function App() {
         <Route path="/card" element={<Card/>}></Route>
         <Route path="/thank" element={<Thank/>}></Route>
         <Route path="/checkout" element={<Checkout/>}></Route>
-        <Route path='/login' element={<Login />} />
+        <Route path='/Login' element={<Login setLog={setLog}/>} />
       <Route path='/signup' element={<SignUp/>} />
         
       </Routes>

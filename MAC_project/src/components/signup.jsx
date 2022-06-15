@@ -26,7 +26,7 @@ export const SignUp = () => {
 
   function handleSubmit(){
     if(data.name && data.email && data.password){
-      axios.post("https://backend1242.herokuapp.com/auth/Signup",data).then(() => {
+      axios.post("https://sheltered-springs-86254.herokuapp.com/auth/Signup",data).then(() => {
         alert("Successfully Registered")
         navigate("/Login")
       })
