@@ -3,7 +3,23 @@ export const DELETECART ="DELETECART"
 export const DELITEM="DELITEM"
 export const UPDATE="UPDATE"
 export const SETCART="SETCART"
+export const LOGIN ="LOGIN"
+export const SIGNUP ="SIGNUP"
 import axios from "axios"
+
+export const loginRequest = (user) => {
+    return {
+        type: LOGIN,
+        payload: user
+    }
+}
+
+export const signupRequest = (user) => {
+    return {
+        type: SIGNUP,
+        payload: user
+    }
+}
 export const addcart =(payload)=>{
     return {
         type:ADDCART,

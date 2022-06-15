@@ -3,11 +3,13 @@ import Button from '@mui/material/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import {useState} from "react";
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 // import { loginRequest } from '../redux/actions';
 import { useDispatch } from 'react-redux';
-
+//  var {id} =useParams();
 
 export const Login = ({setLog}) => {
+  var {id} =useParams();
   const navigate = useNavigate();
   const [state,setState] = useState(false);
   const [hidden,setHidden] = useState("");
@@ -33,7 +35,9 @@ export const Login = ({setLog}) => {
         localStorage.setItem("app", JSON.stringify(data));
         setLog(true)
         alert("Successfully Loged-In")
+        // navigate(`/product/:${id}`)
         navigate("/")
+
       })
     }
     else{

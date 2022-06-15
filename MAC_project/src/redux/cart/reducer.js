@@ -1,5 +1,5 @@
 // import { Product } from "../components/product";
-import { ADDCART,DELETECART,DELITEM,UPDATE,SETCART } from "./action";
+import { ADDCART,DELETECART,DELITEM,UPDATE,SETCART,LOGIN,SIGNUP } from "./action";
 
 // const count=[];
 // export const reducer =(state=count,action)=>{
@@ -42,7 +42,8 @@ import { ADDCART,DELETECART,DELITEM,UPDATE,SETCART } from "./action";
 //             return state
 //     }
 // }
-const count= {count: [],sivaji:[]};
+const count= {count: [],sivaji:[], users:[],
+    user:null};
 export const reducer = (state=count,action)=>{
     // console.log(state,"coming data")
     // console.log(state.sivaji,"coming sivaji")
@@ -50,6 +51,16 @@ export const reducer = (state=count,action)=>{
     
     switch(action.type)
     {
+        case LOGIN:
+            return {
+                ...state,
+                user:payload,
+                isLoggedIn: true
+            }
+          
+
+            case SIGNUP:
+                return { "users": payload};
         case ADDCART:
                  
                 

@@ -35,7 +35,7 @@ useEffect(()=>{
 },[])
     return (
       <>
-      <Navbar/>
+      {/* <Navbar/> */}
 
 
       

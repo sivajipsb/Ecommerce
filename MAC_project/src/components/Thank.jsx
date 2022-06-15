@@ -45,7 +45,7 @@ const totallist=(list)=>{
             <div id="sthanks" onClick = {
                 ()=>{
                     // dispatch(delete_api(sivaji))
-                    navigate("/")
+                    // navigate("/")
                 }
             }>
             <div id ="sbooking">

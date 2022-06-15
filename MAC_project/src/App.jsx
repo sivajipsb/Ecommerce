@@ -23,9 +23,11 @@ function App() {
   return (
     <div className="App">
    {/* <Navbar/>  */}
+   {/*  */}
+   <Navbar setLog={setLog} log={log}/>
       <Routes>
         <Route path="/" element={<Product/>}></Route>
-        <Route path="/product/:id" element={<Product_id/>}></Route>
+        <Route path="/product/:id" element={<Product_id  log={log}/>}></Route>
         <Route path="/gotocart" element={<Goto_cart/>}></Route>
         <Route path="/payment" element={<Payment/>}></Route>
         <Route path="/card" element={<Card/>}></Route>

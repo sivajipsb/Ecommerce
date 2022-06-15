@@ -8,7 +8,12 @@ import {  faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const Navbar = ()=>{
+export const Navbar = ({setLog,log})=>{
+    const user = JSON.parse(localStorage.getItem("app")) || null;
+  const handlelog = () => {
+    localStorage.removeItem("app");
+    setLog(false)
+  }
     const counting=useSelector((store)=>store.cart.count)
     const sivaji=useSelector((store)=>store.cart.sivaji)
     const dispatch = useDispatch()
@@ -45,19 +50,33 @@ export const Navbar = ()=>{
                 {/* <div><Link to ="/product"  style={{textDecoration:"none"}}><b>Products</b></Link></div> */}
                
                 <div><Link to ="/gotocart" style={{textDecoration:"none"}}><b >CartPage</b></Link></div>
-                <div><Link to ="/signup" style={{textDecoration:"none"}}><b>Signup</b></Link></div>
+                {/* <div><Link to ="/signup" style={{textDecoration:"none"}}><b>Signup</b></Link></div> */}
                 {/* <div><Link to ="/abouts" style={{textDecoration:"none"}}><b>signup</b></Link></div> */}
                 </div>
                  {/* <h1>gowtham sai shopping mall </h1> */}
                 {/* <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({counting.length})  </button></div> */}
                 {/* <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({set.length})  </button></div>    */}
                 <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </button></div>
+               
                 {/* <div><button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({answer})  </button></div> */}
+                {log ? 
+              <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> : 
+              <Link  to="/SignUp" className="btn btn-outline-primary ms-2">
+                SignUp
+              </Link>
+              }
             </div>
 
             {/* <img src ="https://swall.teahub.io/photos/small/213-2136622_electronics-products.jpg" height="500px" width="100%"  /> */}
             {/* <Product/> */}
-        </div>
+            <div style={{display:"flex",paddingRight:"50px"}}>
+              {console.log(log)}
+             
+              
+              {/* <CartBtn></CartBtn> */}
+            </div>
+          </div>
+        // </div>
 
     )
    

@@ -25,28 +25,28 @@ export const Product_id =({log})=>{
 // }
    
     useEffect(()=>{
-      dispatch(api_id(id))
+      dispatch(api_id(id)) 
       dispatch(getcart_api())
             
         
-    },[])
+    })
 
-    var handleCart=(data)=>{
+    // var handleCart=(data)=>{
        
-            if(cartBtn === 'Add To Cart'){
+    //         if(cartBtn === 'Add To Cart'){
                
-                // dispatch(addcart(data))
-                dispatch(cart_api(data))
+    //             // dispatch(addcart(data))
+    //             dispatch(cart_api(data))
 
-                // console.log(dispatch(addcart(data)),"sivaji vasthunna cart data ")
-                // console.log(dispatch(getcart_api,"sivaji vasthunna get data "))
+    //             // console.log(dispatch(addcart(data)),"sivaji vasthunna cart data ")
+    //             // console.log(dispatch(getcart_api,"sivaji vasthunna get data "))
                 
-                // dispatch(getcart_api())
-                // console.log(dispatch(getcart_api()))
+    //             // dispatch(getcart_api())
+    //             // console.log(dispatch(getcart_api()))
               
         
-                // setcartBtn("Remove from cart")
-            }
+    //             // setcartBtn("Remove from cart")
+    //         }
             // else{
             //     // dispatch(delItem(data))
                    
@@ -55,7 +55,7 @@ export const Product_id =({log})=>{
             //     setcartBtn("Add To Cart")
             // }
         
-    }
+    // }
     // useEffect(()=>{
     //     dispatch(api_id(id))
     //     dispatch(getcart_api())
@@ -67,7 +67,7 @@ export const Product_id =({log})=>{
         <>
         {Object.keys(me).length===0 ?(<div><h1>...loading</h1></div>):(
         <div>
-            <Navbar/> 
+            {/* <Navbar/>  */}
             <div id="flex">
                 <div id="image">
                     <img src={me.image} height= "400px"/>
@@ -77,7 +77,9 @@ export const Product_id =({log})=>{
                     <p><b>{me.description}</b></p>
                     <p><b> Price  : {me.price} RS</b></p>
                     {log ? 
-                            <button onClick={()=>handleCart(product)} className='btn btn-outline-primary my-5'>{cartBtn}</button>
+                            // <button onClick={ dispatch(cart_api(me))} className='btn btn-outline-primary my-5'>addtocart</button>
+
+                            <button  id="button" onClick={()=> dispatch(cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button>
                        :
                             <div>
                                  <button className='btn btn-outline-primary my-5'  data-bs-toggle="modal" data-bs-target="#thankyouModal">Add To Cart</button>
@@ -85,17 +87,17 @@ export const Product_id =({log})=>{
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Login First</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Sign up first</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Please login to your account !
+                                        Please register to your account !
                                     
                                     </div>
                                     <div class="modal-footer">
                                         <button onClick={()=>{
-                                            navigate("/login")
-                                        }}  type="button" data-bs-dismiss="modal" class="btn btn-outline-primary">Go to Login</button>
+                                            navigate("/signup")
+                                        }}  type="button" data-bs-dismiss="modal" class="btn btn-outline-primary">Go to Sign up</button>
                                     
 
                                     </div>

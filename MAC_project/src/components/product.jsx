@@ -63,7 +63,7 @@ export const Product = () => {
                 <div>
 
                     <div>
-                        <Navbar />
+                        {/* <Navbar setLog={setLog} log={log}/> */}
                         <div id="one" >
 
 
