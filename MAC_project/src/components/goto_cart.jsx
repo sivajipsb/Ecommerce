@@ -58,15 +58,15 @@ useEffect(()=>{
                         <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
                         <button onClick={() => dispatch(update(e,cart,-1))} >-</button> */}
 
-                <button onClick={() => dispatch(Put_api(e,sivaji,1))}   >+</button>
+                <button onClick={() => dispatch(Put_api(e,sivaji,1))}   className="plus btn-outline-primary" >+</button>
                 <span style={{fontSize:"25px",margin:"0px 10px"}}>{e.quantity}</span>
-                <button onClick={() => dispatch(Put_api(e,sivaji,-1))} >-</button>
+                <button onClick={() => dispatch(Put_api(e,sivaji,-1))}  className="plus btn-outline-primary">-</button>
                   
                   <br></br>
-                   <button id="delete" onClick={()=>{
+                   <button id="delete" className="btn btn-outline-primary" onClick={()=>{
                       dispatch(Deletecart(e))
                       dispatch(Delete_api(e))
-                    }}> delete</button>
+                    }}> Delete</button>
                    <div ><h3>Total : {(+e.quantity)*(+(e.price))}</h3></div>
                    
 
