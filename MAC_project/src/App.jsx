@@ -11,6 +11,7 @@ import {Checkout} from "./components/checkout"
 import {SignUp} from "./components/signup"
 import {Login} from "./components/login"
 import {useState,useEffect} from "react"
+import Homepage from "./components/homepage"
 function App() { 
   const [log,setLog] = useState(false);
   useEffect(() => {
@@ -26,7 +27,8 @@ function App() {
    {/*  */}
    <Navbar setLog={setLog} log={log}/>
       <Routes>
-        <Route path="/" element={<Product/>}></Route>
+        <Route path="/" element={<Homepage/>}></Route>
+        <Route path="/products" element={<Product/>}></Route>
         <Route path="/product/:id" element={<Product_id  log={log}/>}></Route>
         <Route path="/gotocart" element={<Goto_cart/>}></Route>
         <Route path="/payment" element={<Payment/>}></Route>
