@@ -46,6 +46,7 @@ export const Navbar = ({setLog,log})=>{
             <div id="navbar">
                {/* <h1>sivaji mart</h1> <div>sivaji mart</div> */}
                 <div id="navbarone">
+                <div ><Link to ="/" style={{textDecoration:"none"}}><b>Home</b></Link></div>
                 <div ><Link to ="/products" style={{textDecoration:"none"}}><b>Products</b></Link></div>
                 {/* <div><Link to ="/product"  style={{textDecoration:"none"}}><b>Products</b></Link></div> */}
                

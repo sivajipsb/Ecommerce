@@ -4,6 +4,7 @@ const Homepage = () => {
   return (
     <>
     {/* // <div>homepage</div> */}
+    {/* <Footer/> */}
     <div className="carousal">
       <div
         id="carouselExampleIndicators"
@@ -79,27 +80,16 @@ const Homepage = () => {
            </div>
            
       </div>
-      {/* <div className="images">
-      <img  width="100%" src="https://i3-prod-assets.indiaistore.com/files/uploads/banners/home-page-hero/banner_1652556493_5976.jpg" alt="" />
-  
-      </div> */}
-      {/* <h1 className="center">Trending</h1> */}
-
-      {/* <div className="container2">
-          
-          <div className="container2in">
-            
-            <img height="100%" width="100%"  src="https://www.aptronixindia.com/media/slidebanner/g/i/gift_cards_banner_2x.jpeg" alt="" />
-          </div>
-          <div className="container2in">
-            <img height="100%" width="100%"  src="https://www.aptronixindia.com/media/froogal/events/images/2/7/277256902_1354526655029294_1164861297238614513_n.png" alt="" />
-          </div>
-      </div> */}
       
-   
-    </div>
+      
+      {/* <div>
     <Footer/>
+    </div> */}
+    </div>
+   
+    
     </>
+    
   )
 }
 
