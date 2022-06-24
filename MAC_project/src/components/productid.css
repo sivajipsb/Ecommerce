@@ -11,12 +11,12 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 #button:hover{
-    background-color: rgb(73, 67, 159);
+    /* background-color: rgb(73, 67, 159); */
     border-radius: 50px;
     cursor:pointer
 }
 #button:active {
-    background-color: #3e8e41;
+    /* background-color: #3e8e41; */
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }

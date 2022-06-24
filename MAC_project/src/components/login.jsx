@@ -36,7 +36,7 @@ export const Login = ({setLog}) => {
         setLog(true)
         alert("Successfully Loged-In")
         // navigate(`/product/:${id}`)
-        navigate("/")
+        navigate("/products")
 
       })
     }

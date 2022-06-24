@@ -79,10 +79,11 @@ export const Product_id =({log})=>{
                     {log ? 
                             // <button onClick={ dispatch(cart_api(me))} className='btn btn-outline-primary my-5'>addtocart</button>
 
-                            <button  id="button" onClick={()=> dispatch(Cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button>
+                            // <button   onClick={()=> dispatch(Cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}  className="btn btn-outline-primary">Add to cart</Link></button>
+                             <Link to = "/gotocart" style={{textDecoration:"none"}}  className="btn btn-outline-primary" onClick={()=> dispatch(Cart_api(me))  }>Add to cart</Link>
                        :
                             <div>
-                                 <button className='btn btn-outline-primary my-5'  data-bs-toggle="modal" data-bs-target="#thankyouModal">Add To Cart</button>
+                                 <button className='btn btn-outline-primary my-5'  data-bs-toggle="modal" data-bs-target="#thankyouModal" >Add To Cart</button>
                                 <div class="modal fade" id="thankyouModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
