@@ -97,7 +97,7 @@ export function Navbar({setLog,log}) {
   }
   return (
     <>
-      <nav  style ={{backgroundColor:""}}className="navbar navbar-expand-lg navbar-bright bg-bright shadow-sm">
+      <nav  style ={{backgroundColor:"#e7f1f0"}}className="navbar navbar-expand-lg navbar-bright bg-bright shadow-sm">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -148,7 +148,11 @@ export function Navbar({setLog,log}) {
             </div>
             <div style={{display:"flex",paddingRight:"50px"}}>
               {console.log(log)}
-              <button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </button>
+              {/* <button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </button> */}
+              <button className="btn btn-outline-primary ms-2" > <Link className="nav-link active" to="/gotocart">
+                  
+                  <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </Link> </button>
+
                {/* <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> */}
               {log ? 
               <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> : 
