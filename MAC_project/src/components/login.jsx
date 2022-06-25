@@ -58,7 +58,7 @@ export const Login = ({setLog}) => {
       <br />
       <Button onClick={handleSubmit} style={{width:"30%",height:"50px"}} variant="contained">LOGIN</Button>
       <br />
-      {/* <Link to="/Signup">Create an Account</Link> */}
+      
      
     </div>
   )

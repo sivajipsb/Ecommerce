@@ -1,10 +1,9 @@
 import React from 'react'
-import { Footer } from './footer'
+
 const Homepage = () => {
   return (
     <>
-    {/* // <div>homepage</div> */}
-    {/* <Footer/> */}
+  
     <div className="carousal">
       <div
         id="carouselExampleIndicators"
@@ -82,9 +81,7 @@ const Homepage = () => {
       </div>
       
       
-      {/* <div>
-    <Footer/>
-    </div> */}
+      
     </div>
    
     

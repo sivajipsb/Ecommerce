@@ -12,11 +12,9 @@ export const Product = () => {
     
     const { products, loading, error, filters } = useSelector((store) => store.items)
     const[state,setstate]=useState(products)
-    // const sivaji=useSelector((store) => store.items.products)
-    // console.log(sivaji.length,"sivaji")
+    
     const dispatch = useDispatch()
-    // const[data,setdata]=useState([])
-    // const[state,setstate]=useState(products)
+   
 
     const { id } = useParams();
     useEffect(() => {
@@ -26,33 +24,30 @@ export const Product = () => {
 
 
     }, [])
-    // const products=useSelector((store)=>store.items.products)
-    
-    // console.log(products, "products",products.length)
+  
 
     const Filter = (item) => {
-        // const updatedlist = products.filter((x) => x.category === item);
+       
         dispatch(filterProducts(item))
-        // console.log(updatedlist, "update")
+      
     }
 
 
     function handlesort(term){
         if(term==="lh"){
           let x=products.sort((a,b)=> a.price-b.price)
-        //   console.log(x)
-        //    setdata([...x])
+       
            setstate([...x])
         }
         if(term==="hl"){
             let x=products.sort((a,b)=> b.price-a.price)
             console.log(x)
-            //  setdata([...x])
+           
             setstate([...x])
           }
     }
 
-    // : error ? (<Error error="Somthing Went Wrong" />) :
+
 
    
 
@@ -63,7 +58,7 @@ export const Product = () => {
                 <div>
 
                     <div>
-                        {/* <Navbar setLog={setLog} log={log}/> */}
+                        
                         <div id="one" >
 
 

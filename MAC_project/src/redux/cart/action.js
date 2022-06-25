@@ -49,59 +49,49 @@ export const Put_api = (e,sivaji,value) => (dispatch) => {
     
 
     axios.put(`https://macsivaji.herokuapp.com/cart/${e.id}`,e)
-        // dispatch(setproduct(data))
+        
         .then((res) => {
-                    // console.log("put data  ", res.data);
-                  
-                    // getcart_api()
-                    // console.log(dispatch(getcart_api()),"heeeeee")
+                    
 
 
-    // }).catch((error) => {
-    //     dispatch(errorstate(error))
+    
     })
-    // .then(setcart()).then(())
+  
     dispatch(Updateadd(x))
    
 }
 
 export const Cart_api = (products) => (dispatch) => {
 
-    // dispatch(loading())
+    
 
     axios.post("https://macsivaji.herokuapp.com/cart",products)
-        // dispatch(setproduct(data))
+       
         .then((res) => {
-                    // console.log("Add to cart mine  ", res.data);
-                  
-                    // getcart_api()
-                    // console.log(dispatch(getcart_api()),"heeeeee")
+                    
 
 
-    // }).catch((error) => {
-    //     dispatch(errorstate(error))
+   
     })
-    // .then(setcart()).then(())
+   
    
 }
 
 
 export const Delete_api = (products) => (dispatch) => {
 
-    // dispatch(loading())
+   
 
      axios
     .delete(`https://macsivaji.herokuapp.com/cart/${products.id}`)
     .then((res) => {
-    //   console.log("remove to cart", res.data);
-    //   console.log(products.id,"dataid")
+
+    
     })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
+    
 
 }
-// 
+
 
 
 export const Setcart = (payload) => {
@@ -112,16 +102,14 @@ export const Setcart = (payload) => {
 }
 export const Getcart_api = () => (dispatch) => {
 
-    // dispatch(loading())
+   
 
     axios.get("https://macsivaji.herokuapp.com/cart").then(({ data }) => {
         dispatch(Setcart(data))
-        // console.log(dispatch(setcart(data)),"vasthunna")
+        
     })
 
-    //  }).catch((error) => {
-    //     dispatch(errorstate(error))
-    // })
+    
 
 }
 

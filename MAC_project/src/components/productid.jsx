@@ -15,14 +15,12 @@ export const Product_id =({log})=>{
     const dispatch=useDispatch()
     const count=useSelector((store)=>store.count)
     const me=useSelector((store)=>store.single.single)
-    // const[cartBtn,setcartBtn]=useState("Add To Cart")
-    const sivaji=useSelector((store)=>store.cart.sivaji)
+  
+    const items=useSelector((store)=>store.cart.sivaji)
        const navigate=useNavigate()
     var {id} =useParams();
     
-// const sivajidata=()=>{
-//     getcart_api()
-// }
+
    
     useEffect(()=>{
       dispatch(api_id(id)) 
@@ -31,37 +29,7 @@ export const Product_id =({log})=>{
         
     })
 
-    // var handleCart=(data)=>{
-       
-    //         if(cartBtn === 'Add To Cart'){
-               
-    //             // dispatch(addcart(data))
-    //             dispatch(cart_api(data))
-
-    //             // console.log(dispatch(addcart(data)),"sivaji vasthunna cart data ")
-    //             // console.log(dispatch(getcart_api,"sivaji vasthunna get data "))
-                
-    //             // dispatch(getcart_api())
-    //             // console.log(dispatch(getcart_api()))
-              
-        
-    //             // setcartBtn("Remove from cart")
-    //         }
-            // else{
-            //     // dispatch(delItem(data))
-                   
-            //         dispatch(delete_api(data))
-            //         // dispatch(getcart_api())
-            //     setcartBtn("Add To Cart")
-            // }
-        
-    // }
-    // useEffect(()=>{
-    //     dispatch(api_id(id))
-    //     dispatch(getcart_api())
-              
-          
-    //   })
+    
     
     return (
         <>
@@ -77,9 +45,7 @@ export const Product_id =({log})=>{
                     <p><b>{me.description}</b></p>
                     <p><b> Price  : {me.price} RS</b></p>
                     {log ? 
-                            // <button onClick={ dispatch(cart_api(me))} className='btn btn-outline-primary my-5'>addtocart</button>
-
-                            // <button   onClick={()=> dispatch(Cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}  className="btn btn-outline-primary">Add to cart</Link></button>
+                           
                              <Link to = "/gotocart" style={{textDecoration:"none"}}  className="btn btn-outline-primary" onClick={()=> dispatch(Cart_api(me))  }>Add to cart</Link>
                        :
                             <div>
@@ -106,11 +72,7 @@ export const Product_id =({log})=>{
                                 </div>
                             </div>
                             </div> }
-                    {/* <button  id="button" onClick={()=>handleCart(me)  }>{cartBtn}</button> */}
-                    {/* <button  id="button" onClick={()=>handlecart(me)  }>Add to cart</button> */}
-                    {/* <button  id="button" onClick={()=>handleCart(me)  }>{cartBtn}</button> */}
-                   {/* <Link to = "/gotocart" style={{textDecoration:"none"}}> <button  id="button" >gotocart</button></Link> */}
-                    {/* <button  id="button" onClick={()=> dispatch(cart_api(me))  }> <Link to = "/gotocart" style={{textDecoration:"none"}}>Add to cart</Link></button> */}
+                  
                 </div>
             </div>
         </div>)}
