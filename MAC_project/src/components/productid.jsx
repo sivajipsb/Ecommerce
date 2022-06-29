@@ -15,19 +15,21 @@ export const Product_id =({log})=>{
     const dispatch=useDispatch()
     const count=useSelector((store)=>store.count)
     const me=useSelector((store)=>store.single.single)
-  
-    const items=useSelector((store)=>store.cart.sivaji)
+    // const[cartBtn,setcartBtn]=useState("Add To Cart")
+    const sivaji=useSelector((store)=>store.cart.sivaji)
        const navigate=useNavigate()
     var {id} =useParams();
     
-
+// const sivajidata=()=>{
+//     getcart_api()
+// }
    
     useEffect(()=>{
       dispatch(api_id(id)) 
       dispatch(Getcart_api())
             
         
-    })
+    },[])
 
     
     

@@ -9,12 +9,12 @@ import axios from "axios";
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+// import CartBtn from "../buttons/CartBtn";
 
 
 
 export function Navbar({setLog,log}) {
-  const Cart=useSelector((store)=>store.cart.sivaji)
+  const sivaji=useSelector((store)=>store.cart.sivaji)
   const user = JSON.parse(localStorage.getItem("app")) || null;
   const handlelog = () => {
     localStorage.removeItem("app");
@@ -38,7 +38,11 @@ export function Navbar({setLog,log}) {
           <div style={{display: "flex",justifyContent: "space-between"}} className="collapse navbar-collapse" id="navbarSupportedContent">
             <div>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-             
+              {/* <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                  <span className=""></span>
+                  </Link>
+                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link active" to="/">
                   Home
@@ -63,7 +67,7 @@ export function Navbar({setLog,log}) {
               {/* <button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </button> */}
               <button className="btn btn-outline-primary ms-2" > <Link className="nav-link active" to="/gotocart">
                   
-                  <FontAwesomeIcon icon={faCartShopping} /> ({Cart.length})  </Link> </button>
+                  <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </Link> </button>
 
                {/* <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> */}
               {log ? 
@@ -73,7 +77,7 @@ export function Navbar({setLog,log}) {
               </Link>
               }
               
-         
+              {/* <CartBtn></CartBtn> */}
             </div>
           </div>
       
@@ -83,3 +87,4 @@ export function Navbar({setLog,log}) {
   );
 }
 
+// export default Navbar;

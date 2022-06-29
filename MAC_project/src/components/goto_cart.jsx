@@ -30,6 +30,7 @@ const totallist=(list)=>{
 useEffect(()=>{
   // dispatch(api_id(id))
   dispatch(Getcart_api())
+  
         
     
 },[])
