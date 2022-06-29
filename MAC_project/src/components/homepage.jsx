@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Footer } from './footer'
 const Homepage = () => {
   return (
     <>
@@ -83,7 +83,7 @@ const Homepage = () => {
       
       
     </div>
-   
+   <Footer/>
     
     </>
     

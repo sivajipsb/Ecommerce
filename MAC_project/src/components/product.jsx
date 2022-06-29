@@ -59,16 +59,43 @@ export const Product = () => {
 
                     <div>
                         
-                        <div id="one" >
+                        <div id="one">
 
+                        <div id="select">
 
-                            <button onClick={() => { Filter("") }}>All</button>
+                    <div>
+                        <select onChange={(e)=>{Filter(e.target.value)}}>
+            <option value="">Filter By Category</option>
+            <option value="">All</option>
+            <option value="Mobiles">Mobiles</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Tv">Tvs</option>
+            
+          </select>
+          </div>
+          
+                <div>
+          <select onChange={(e)=>{ handlesort(e.target.value)}}>
+            <option value="">Sort By Price</option>
+         {/* <option value="">All</option> */}
+                            
+            <option value="lh">Low-High</option>
+            <option value="hl">High-Low</option>
+        
+            
+          </select>
+          </div>
+          </div>
+
+                            {/* <button onClick={() => { Filter("") }}>All</button>
                             <button onClick={() => { Filter("Mobiles") }}>Mobiles</button>
                             <button onClick={() => { Filter("Tv") }} >Tvs</button>
                             <button onClick={() => { Filter("Laptops") }}>Laptops</button>
                             <button onClick={()=>handlesort("lh")}>lowtohigh</button>
-                             <button onClick={()=>handlesort("hl")}>hightolow</button> 
+                             <button onClick={()=>handlesort("hl")}>hightolow</button>  */}
 
+
+                           
 
 
 

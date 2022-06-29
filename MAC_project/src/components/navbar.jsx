@@ -71,7 +71,11 @@ export function Navbar({setLog,log}) {
 
                {/* <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> */}
               {log ? 
-              <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> : 
+             <Link to ="/products"     className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>Logout</Link>
+              // <Link  to="/SignUp" className="btn btn-outline-primary ms-2">
+              //   SignUp
+              // </Link> 
+              :
               <Link  to="/SignUp" className="btn btn-outline-primary ms-2">
                 SignUp
               </Link>
