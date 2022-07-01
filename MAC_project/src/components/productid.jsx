@@ -48,7 +48,7 @@ export const Product_id =({log})=>{
                     <p><b> Price  : {me.price} RS</b></p>
                     {log ? 
                            
-                             <Link to = "/gotocart" style={{textDecoration:"none"}}  className="btn btn-outline-primary" onClick={()=> dispatch(Cart_api(me))  }>Add to cart</Link>
+                             <Link to = "/products" style={{textDecoration:"none"}}  className="btn btn-outline-primary" onClick={()=> dispatch(Cart_api(me))  }>Add to cart</Link>
                        :
                             <div>
                                  <button className='btn btn-outline-primary my-5'  data-bs-toggle="modal" data-bs-target="#thankyouModal" >Add To Cart</button>

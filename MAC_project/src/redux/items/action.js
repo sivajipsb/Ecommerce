@@ -6,7 +6,10 @@ export const LOADING = "LOADING"
 export const ERRORSTATE = "ERRORSTATE"
 export const FILTER="FILTER"
 export const FILTERPRODUCTS = "FILTERPRODUCTS"
+export const SORT_LOW_TO_HIGH = "SORT_LOW_TO_HIGH";
+export const SORT_HIGH_TO_LOW = "SORT_HIGH_TO_LOW";
 import axios from "axios"
+
 
 export const filterstate = (products) => {
     dispatch({
@@ -61,6 +64,13 @@ export const errorstate = () => {
         type: ERRORSTATE
     }
 }
+export const sortLowToHigh = () => ({
+    type: SORT_LOW_TO_HIGH 
+   });
+
+export const sortHighToLow = () => ({ 
+   type: SORT_HIGH_TO_LOW 
+});
 
 
 

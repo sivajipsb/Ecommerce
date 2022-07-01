@@ -6,12 +6,12 @@ import "./product.css"
 import { useSelector, useDispatch } from "react-redux";
 import { setproduct } from "../redux/items/action";
 import { api } from "../redux/items/action";
-import { filterstate, filterProducts } from "../redux/items/action";
+import { filterstate, filterProducts,sortHighToLow,sortLowToHigh } from "../redux/items/action";
 import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 export const Product = () => {
     
     const { products, loading, error, filters } = useSelector((store) => store.items)
-    const[state,setstate]=useState(products)
+    
     
     const dispatch = useDispatch()
    
@@ -35,15 +35,12 @@ export const Product = () => {
 
     function handlesort(term){
         if(term==="lh"){
-          let x=products.sort((a,b)=> a.price-b.price)
-       
-           setstate([...x])
+        
+           dispatch(sortLowToHigh());
         }
         if(term==="hl"){
-            let x=products.sort((a,b)=> b.price-a.price)
-            console.log(x)
            
-            setstate([...x])
+            dispatch(sortHighToLow());
           }
     }
 
@@ -87,12 +84,7 @@ export const Product = () => {
           </div>
           </div>
 
-                            {/* <button onClick={() => { Filter("") }}>All</button>
-                            <button onClick={() => { Filter("Mobiles") }}>Mobiles</button>
-                            <button onClick={() => { Filter("Tv") }} >Tvs</button>
-                            <button onClick={() => { Filter("Laptops") }}>Laptops</button>
-                            <button onClick={()=>handlesort("lh")}>lowtohigh</button>
-                             <button onClick={()=>handlesort("hl")}>hightolow</button>  */}
+                           
 
 
                            

@@ -67,7 +67,7 @@ export function Navbar({setLog,log}) {
               {/* <button style={{backgroundColor:"pink"}}> <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </button> */}
               <button className="btn btn-outline-primary ms-2" > <Link className="nav-link active" to="/gotocart">
                   
-                  <FontAwesomeIcon icon={faCartShopping} /> ({sivaji.length})  </Link> </button>
+                  <FontAwesomeIcon icon={faCartShopping} />  </Link> </button>
 
                {/* <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> */}
               {log ? 
