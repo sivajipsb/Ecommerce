@@ -128,5 +128,58 @@
       "image": "https://static.connect2india.com/c2icd/product_resources/images/nokia-mobiles.jpg",
       "quantity": 1
     }
+  ],
+  "details": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 3
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 4
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 5
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 6
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 7
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 8
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 9
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 10
+    },
+    {
+      "email": "",
+      "address": "",
+      "id": 11
+    }
   ]
 }
