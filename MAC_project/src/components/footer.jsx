@@ -80,15 +80,17 @@ import {
   
   export const Footer = () => {
     return (
+      <div>
+
+      
       <div className="foter">
         <Container>
           <Left>
-            <Logo>APPLE</Logo>
+            <Logo>E-STORE</Logo>
             <Desc>
-              Aptronix is India’s Largest Apple Premium Reseller. Started in 2011
-              at the Begumpet store in Hyderabad with just 5 employees, Aptronix
-              is now Apple's biggest partner with 48 stores, 14 service centres
-              and 400+ employees, across 14 cities in India.
+            E-Store India is a Venture of Axis E-Corp Solutions Pvt. Ltd. It was started in Year 2016 and is growing year by years.
+
+E-Store India is the electronic revolution, that is planned to serve common people technology  products with best quality and competitive price at the doorstep. The objective of this store chain is to arrange good quality  products on best price in the industry.
             </Desc>
             <SocialContainer>
               <SocialIcon color="3B5999">
@@ -108,10 +110,10 @@ import {
           <Center>
             <Title>SHOP</Title>
             <List>
-              <ListItem>Iphone</ListItem>
-              <ListItem>Mac</ListItem>
-              <ListItem>I-Pad</ListItem>
-              <ListItem>Watch</ListItem>
+              <ListItem>Laptop</ListItem>
+              <ListItem>Tv</ListItem>
+              <ListItem>Mobiles</ListItem>
+              <ListItem>Electronics</ListItem>
               <ListItem>Tv</ListItem>
               <ListItem>My Account</ListItem>
               <ListItem>Accessories</ListItem>
@@ -124,20 +126,20 @@ import {
             <Title>Contact</Title>
             <ContactItem>
               <Room style={{ marginRight: "10px" }} />
-              Hyderabad, Kompally, Telangana-501401
+              Ongole, prakasam, AndhraPradesh-523263
             </ContactItem>
             <ContactItem>
-              <Phone style={{ marginRight: "10px" }} /> +91 9542378392
+              <Phone style={{ marginRight: "10px" }} /> +91 9113078942
             </ContactItem>
             <ContactItem>
               <MailOutline style={{ marginRight: "10px" }} />{" "}
-              Applestore80@gmail.com
+              e-store80@gmail.com
             </ContactItem>
             <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
           </Right>
         </Container>
       </div>
+      </div>
     );
   };
   
-//   export default Footer;
