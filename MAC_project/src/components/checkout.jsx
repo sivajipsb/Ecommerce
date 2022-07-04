@@ -22,7 +22,7 @@ const handleSubmit=(e)=>{
 
 
     
-    const Cart=useSelector((store)=>store.cart.sivaji)
+    const Cart=useSelector((store)=>store.cart.cart)
     var total = 0;
     const itemList=(item)=>{
       let a = item.price

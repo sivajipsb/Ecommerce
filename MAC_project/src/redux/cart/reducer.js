@@ -2,7 +2,7 @@
 import { ADDCART,DELETECART,DELITEM,UPDATE,SETCART,LOGIN,SIGNUP } from "./action";
 
 
-const count= {count: [],sivaji:[], users:[],
+const count= {count: [],cart:[], users:[],
     user:null};
 export const reducer = (state=count,action)=>{
    
@@ -23,21 +23,21 @@ export const reducer = (state=count,action)=>{
                    
                    
                
-                return {...state,sivaji:[...state.sivaji.filter((index)=>index!==action.payload)]
+                return {...state,cart:[...state.cart.filter((index)=>index!==action.payload)]
                 }
             
                 case DELITEM:
                 
-                return {...state,sivaji:[...state.sivaji.filter((x)=>x.id!==action.payload.id)]}
+                return {...state,cart:[...state.cart.filter((x)=>x.id!==action.payload.id)]}
            
                 case UPDATE:
-                    return {...state,sivaji:[...state.sivaji]}
+                    return {...state,cart:[...state.cart]}
                      
             case SETCART:
                 
                 return {
                    
-                    ...state,sivaji:action.payload
+                    ...state,cart:action.payload
                  
     
                     }

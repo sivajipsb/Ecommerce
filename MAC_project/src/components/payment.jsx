@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 export const Payment =() =>{
     // const cart=useSelector((store)=>store.cart.count)
-    const Cart=useSelector((store)=>store.cart.sivaji)
+    const Cart=useSelector((store)=>store.cart.cart)
     const navigate=useNavigate()
     const dispatch=useDispatch()
     useEffect(()=>{

@@ -13,10 +13,10 @@ import { useNavigate } from "react-router-dom";
 export const Product_id =({log})=>{
     
     const dispatch=useDispatch()
-    const count=useSelector((store)=>store.count)
+    // const count=useSelector((store)=>store.count)
     const me=useSelector((store)=>store.single.single)
     
-    const sivaji=useSelector((store)=>store.cart.sivaji)
+    // const sivaji=useSelector((store)=>store.cart.sivaji)
        const navigate=useNavigate()
     var {id} =useParams();
     

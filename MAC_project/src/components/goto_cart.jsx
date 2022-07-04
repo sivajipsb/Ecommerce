@@ -11,7 +11,7 @@ import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 
 export function Goto_cart() {
 
-const Cart=useSelector((store)=>store.cart.sivaji)
+const Cart=useSelector((store)=>store.cart.cart)
 
    
   //  console.log(state,"state")
