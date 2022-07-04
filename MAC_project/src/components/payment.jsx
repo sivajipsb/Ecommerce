@@ -5,13 +5,12 @@ import wallets from "./images/wallets.jpg"
 import upi from "./images/upi.png"
 import paytm from "./images/paytm.png"
 import hdfc from "./images/hdfc.png"
-// import { useSelector } from "react-redux"
 import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
 import { useDispatch, useSelector } from "react-redux"
 
 export const Payment =() =>{
-    const cart=useSelector((store)=>store.cart.count)
-    const sivaji=useSelector((store)=>store.cart.sivaji)
+    // const cart=useSelector((store)=>store.cart.count)
+    const Cart=useSelector((store)=>store.cart.sivaji)
     const navigate=useNavigate()
     const dispatch=useDispatch()
     useEffect(()=>{
@@ -23,15 +22,11 @@ export const Payment =() =>{
       
     var total = 0;
 const totallist=(list)=>{
-  let a = list.price
-    total=total+(+a)*list.quantity;    
+  let Items = list.price
+    total=total+(+Items)*list.quantity;    
     return(
        <>
-     
-        
-          {/* <h3><b>{list.title}</b>:<span> {a} Rs  <b>({list.quantity})</b></span></h3> */}
-        
-      
+    
         <br></br>
         </>
     
@@ -51,14 +46,8 @@ const totallist=(list)=>{
                     </div>
                 <div id="schoose"><p>Choose a payment option</p></div>
  
-                {/* <b>Total Items:{cart.length}</b>
-                <h3>Total Amount:  {cart.reduce((accumulator,object)=>{
-                    return accumulator+object.price */}
-
-                       
-                    
-                {/* },0)} Rs</h3> */}
-                {sivaji.map(totallist)}
+              
+                {Cart.map(totallist)}
              
              <h3>Total (INR) :<strong>Rs {total}</strong></h3>
                
