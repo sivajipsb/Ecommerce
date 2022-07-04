@@ -62,25 +62,7 @@ const Homepage = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      {/* <h1 className="center">Products</h1>
-      <div className="cont2" style={{width:"90%",height:"500px",margin:"auto"}}>
-        
-             <div className="cont2in" >
-             <img  height="90%" width="100%" src="https://www.gizbot.com/images/2019-02/vivo-u1_155107538060.jpg" alt="images" />
-             <h3>Mobile</h3>
-           </div> *
-           <div className="cont2in">
-            <img  height="90%" width="100%" src="https://laptoping.com/specs/wp-content/uploads/2015/04/Dell-Inspiron-I7548-4271SLV.jpg" alt="images" />
-            <h3>Laptop</h3>
-           </div>
-           <div className="cont2in">
-            <img  height="90%" width="100%" src="https://www.gizbot.com/images/2020-05/realme-android-smart-tv-tv-43_159047803000.jpg" alt="images" />
-            <h3>Tv</h3>
-           </div> 
-           
-      </div> */}
-      
-      
+    
       
     </div>
     </div>

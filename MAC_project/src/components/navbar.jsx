@@ -9,12 +9,12 @@ import axios from "axios";
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import CartBtn from "../buttons/CartBtn";
+
 
 
 
 export function Navbar({setLog,log}) {
-  const sivaji=useSelector((store)=>store.cart.sivaji)
+  const Cart=useSelector((store)=>store.cart.sivaji)
   const user = JSON.parse(localStorage.getItem("app")) || null;
   const handlelog = () => {
     localStorage.removeItem("app");
@@ -38,11 +38,7 @@ export function Navbar({setLog,log}) {
           <div style={{display: "flex",justifyContent: "space-between"}} className="collapse navbar-collapse" id="navbarSupportedContent">
             <div>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {/* <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                  <span className=""></span>
-                  </Link>
-                </li> */}
+              
                 <li className="nav-item">
                   <Link className="nav-link active" to="/">
                   Home
@@ -69,19 +65,17 @@ export function Navbar({setLog,log}) {
                   
                   <FontAwesomeIcon icon={faCartShopping} />  </Link> </button>
 
-               {/* <button className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>{user.name} Logout</button> */}
+              
               {log ? 
              <Link to ="/products"     className="btn btn-outline-primary ms-2" onClick={() => handlelog()}>Logout</Link>
-              // <Link  to="/SignUp" className="btn btn-outline-primary ms-2">
-              //   SignUp
-              // </Link> 
+             
               :
               <Link  to="/SignUp" className="btn btn-outline-primary ms-2">
                 SignUp
               </Link>
               }
               
-              {/* <CartBtn></CartBtn> */}
+              
             </div>
           </div>
       
@@ -91,4 +85,3 @@ export function Navbar({setLog,log}) {
   );
 }
 
-// export default Navbar;

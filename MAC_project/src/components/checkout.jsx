@@ -1,13 +1,10 @@
 
 
 import { useNavigate } from "react-router-dom";
-
-
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import {Cart_api,Delete_api,Getcart_api} from "../redux/cart/action"
-import axios from "axios"
-// import { Link, useNavigate } from "react-router-dom";
+
 
 
 export const  Checkout = () => {
@@ -17,17 +14,15 @@ export const  Checkout = () => {
 const handleSubmit=(e)=>{
   e.preventDefault();
       
-      // axios.post("http://localhost:5050/details",{email:"",address:""}).then(() => {
-        // alert("Successfully Registered")
-        // navigate("/Login
+      
      navigate("/payment")
-      // })
+     
  
 }
 
 
     
-    const sivaji=useSelector((store)=>store.cart.sivaji)
+    const Cart=useSelector((store)=>store.cart.sivaji)
     var total = 0;
     const itemList=(item)=>{
       let a = item.price
@@ -56,10 +51,10 @@ const handleSubmit=(e)=>{
           <div className="col-md-5 col-lg-4 order-md-last">
             <h4 className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-primary">Order Summery</span>
-              <span className="badge bg-primary rounded-pill">{sivaji.length}</span>
+              <span className="badge bg-primary rounded-pill">{Cart.length}</span>
             </h4>
             <ul className="list-group mb-3">
-           {sivaji.map(itemList)}
+           {Cart.map(itemList)}
               <li className="list-group-item d-flex justify-content-between">
                 <span>Total (INR)</span>
                 <strong>Rs {total}</strong>
@@ -88,7 +83,7 @@ const handleSubmit=(e)=>{
                     required
                   />
                   <div className="invalid-feedback">
-                    Please enter a valid email address htmlFor shipping updates.
+                    Please enter a valid email address For shipping updates.
                   </div>
                 </div>
 
